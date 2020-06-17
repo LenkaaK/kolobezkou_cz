@@ -1,9 +1,15 @@
 <template>
-  <div class="home">
-    
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+      <h1>Koloběžkou.cz</h1>
   </div>
 </template>
 
 <script>
+export default {
+
+}
 </script>
+
+<style>
+
+</style>

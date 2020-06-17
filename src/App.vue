@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <navigace />
+         <router-view/>
   </div>
 </template>
 
 
 <script>
+import Navigace from './components/Navigace.vue'
+
 export default {
+  components:{
+    navigace: Navigace
+  }
    
 }
 </script>
@@ -20,5 +22,24 @@ export default {
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+
+
+  body{
+  margin: 0;
+  background-image: url('./assets/images/intro.jpeg');
+  background-repeat:  no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+
+
+  font-family: 'Open Sans', sans-serif;
+  color:white
+}
 
 </style>
