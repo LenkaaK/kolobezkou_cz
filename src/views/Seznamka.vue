@@ -26,6 +26,8 @@
   </div>
 </template>
 
+
+
 <script>
 import trasyData from './../assets/data/trasy.js';
 export default {
