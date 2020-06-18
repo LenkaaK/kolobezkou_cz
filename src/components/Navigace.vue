@@ -4,7 +4,7 @@
         <router-link to="/" class="home nav" >Home</router-link> 
       </div> 
       <div >
-        <router-link to="/trasy" class="trasy nav" >TRASY</router-link>
+        <router-link to="/trasy" class="trasy nav" >Trasy</router-link>
       </div>
       <div>
         <router-link to="/seznamka" class="seznamka nav">Seznamka</router-link>

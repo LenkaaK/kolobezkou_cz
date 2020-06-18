@@ -35,9 +35,6 @@ html { box-sizing: border-box; }
   background-repeat:  no-repeat;
   background-position: center;
   background-size: cover;
-  
-
-
   font-family: 'Open Sans', sans-serif;
   color:white
 }
