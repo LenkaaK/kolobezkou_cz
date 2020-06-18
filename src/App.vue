@@ -33,9 +33,7 @@ body{
 
   margin: 0;  
 
-
   font-family: 'Open Sans', sans-serif;
-  color:white
-}
+  }
 
 </style>
