@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Trasy from '../views/Trasy.vue'
 import Pujcovny from '../views/Pujcovny.vue'
 import Seznamka from '../views/Seznamka.vue'
+import Detail from '../views/Detail.vue'
 
 Vue.use(VueRouter)
 
@@ -28,7 +29,11 @@ Vue.use(VueRouter)
     name: 'Seznamka',
     component: Seznamka
   },
-
+  {
+    path: '/trasy/:id',
+    name: 'Trasa',
+    component: Detail
+  },
 ]
 
 const router = new VueRouter({

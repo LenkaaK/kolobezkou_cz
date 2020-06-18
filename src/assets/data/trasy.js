@@ -22,8 +22,14 @@ export default [
         ],
         
         photo: [
-            {picture: "foto-001-01", alt: "Cyklostezka Bečva", text: "Část vede po silnici."},
-            {picture: "foto-001-02", alt: "Kostel Panny Marie Sněžné", text: "Kostel Panny Marie Sněžné ve Velkých Karlovicích"}
+            {picture: "foto-001-01", alt: "Chaty na Valašsku", text: "Chaty ve Valašském stylu."},
+            {picture: "foto-001-02", alt: "Cyklostezka Bečva", text: "V dáli pohled na Radhošť. Většina cesty vede po takto krásných cyklostezkách."},
+            {picture: "foto-001-03", alt: "Vodní nádrž Horní Bečva", text: "Vodní nádrž Horní Bečva postavena v letech 1933 - 1947."},
+            {picture: "foto-001-04", alt: "Cyklostezka Bečva", text: "Mezi Horní Bečvou a Třeštíkem."},
+            {picture: "foto-001-05", alt: "Mezi Třeštíkem a Babskou", text: "Terénní úsek mezi Třeštíkem a Babskou. Cesta chvíli velmi prudce klesá, později se střídá s asfaltovými úseky."},
+            {picture: "foto-001-06", alt: "Kostel Panny Marie Sněžné", text: "Dřevěný barokní kostel Panny Marie Sněžné ve Velkých Karlovicích. Založen v roce 1754, dnes je to kulturní památka."},
+            {picture: "foto-001-07", alt: "Cyklostezka Bečva", text: "Před Vsetínem je krátký úsek po zpevněné lesní cestě, ale jede se po ní dobře i na koloběžce."},
+            {picture: "foto-001-08", alt: "Třeštík", text: "Třeštík - nejvyšší vrchol trasy ve výšce 850 m. "},
         ]
 
     },
