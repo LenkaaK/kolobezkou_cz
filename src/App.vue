@@ -29,12 +29,11 @@ html { box-sizing: border-box; }
 
 
 
-  body{
-  margin: 0;
-  background-image: url('./assets/images/intro.jpeg');
-  background-repeat:  no-repeat;
-  background-position: center;
-  background-size: cover;
+body{
+
+  margin: 0;  
+
+
   font-family: 'Open Sans', sans-serif;
   color:white
 }
