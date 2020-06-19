@@ -3,50 +3,65 @@
     <header class="bgr_img">
       <img src ="./../assets/images/intro_routes.jpeg" alt="hlavicka">
     </header>
-    <div class="main_heading">
-          <h1>Najdi svého parťáka</h1>
-       </div>
-        <div v-html="trasy[0].map" class="mapa"></div>
-        <div class="trasapopis">
-          <h2>{{trasy[0].name}}</h2>
+
+    <div class="detail-stranka">
+      <div class="main_heading">
+            <h1>Najdi svého parťáka</h1>
+      </div>
+
+      <h2>{{trasy[0].name}}</h2>
+
+      <div v-html="trasy[0].map" class="mapa"></div>
+
+      
+
+      <div class="trasapopis">
+
+        <div class="info">
           <p>Hodnocení: {{trasy[0].stars}}</p>
 
-          <div class="inline">
-            <div><img src="./../assets/icons/distance01.svg" width="40px"></div>
-            <div><p>{{trasy[0].distance}} km / {{trasy[0].time}} hodin</p></div>
-          </div>
-          <p>{{trasy[0].ascent}} m</p>
-
-
           <div>
-            <p
-            v-for="(trasa, index) in trasy[0].region"
-            v-bind:key="index"
-            class="inline"
-            >
-              {{trasa}}
-            </p>
+            <img src="./../assets/icons/distance02.svg" width="40px">
+            {{trasy[0].distance}} km / {{trasy[0].time}} hodin
           </div>
 
           <div>
-            <p
-            v-for="(trasa, index) in trasy[0].hashtags"
+            <img src="./../assets/icons/ascent.svg" width="40px">
+            {{trasy[0].ascent}} m
+          </div>
+
+          <img src="./../assets/icons/region.svg" width="40px">
+          <div
+            v-for="(region, index) in trasy[0].region"
             v-bind:key="index"
             class="inline"
-            >
-              #{{trasa}}
-            </p>
+          >
+            {{region}}
           </div>
+          <br>
+          <img src="./../assets/icons/hash.svg" width="40px">
+          <div
+            v-for="(hash, index) in trasy[0].hashtags"
+            v-bind:key="index"
+            class="inline"
+          >
+            #{{hash}}
+          </div>
+
         </div>
-        
-      <!-- ZKOUŠKA GRAFU -->
-    <figure class="pie-chart">
-      	<figcaption>
-		      Terén 5%<span style="color:#59a14f"></span><br>
-		      Asfalt 95%<span style="color:#edc949"></span>
-	      </figcaption>
-    </figure>
+              
+        <div class="graf">
+          <figure class="pie-chart">
+            <figcaption>
+              Terén {{trasy[0].terrain.gravel}}%<span style="color:#00818a"></span><br>
+              Asfalt {{trasy[0].terrain.asphalt}}%<span style="color:#ec9b3b"></span>
+            </figcaption>
+          </figure>
+        </div>
 
+
+      </div>
+    </div>   
   </div>
 </template>
 
@@ -63,7 +78,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .detail-stranka {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .trasapopis p {
     color: black;
     text-transform: none;
@@ -71,18 +92,33 @@ export default {
   }
 
   .trasapopis {
-    margin-left: 15px;
-    margin-right: 15px;
-    max-width: 50%;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    text-align: center;
+    background-color: #293462;
+    color: white;
+    padding: 5px;
   }
 
   .mapa {
     text-align: center;
-    margin: 20px;
   }
 
   .inline {
     display: inline;
+  }
+
+  .info {
+    flex: 2 1 calc((100%-20px)/2);
+    text-align: left;
+  }
+
+  .graf {
+    flex: 1 1 calc((100%-20px)/2);
   }
 
   /* STYLOVÁNÍ GRAFU */
@@ -91,23 +127,24 @@ export default {
     background:
       radial-gradient(
         circle closest-side,
-        white 0,
-        white 39.6%,
+        #eee,
+        #eee 39.6%,
         transparent 39.6%,
         transparent 60%,
-        white 0
+        #eee 0
       ),
       conic-gradient(
-        #59a14f 0,
-        #59a14f 5%,
-        #edc949 0,
-        #edc949 100%
+        #00818a 0,
+        #00818a 5%,
+        #ec9b3b 0,
+        #ec9b3b 100%
     );
     position: relative;
     max-width: 500px;
     min-height: 350px;
     margin: 0;
     /*outline: 1px solid #ccc;*/
+    background-color: red;
   }
   .pie-chart figcaption {
     position: absolute;
