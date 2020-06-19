@@ -1,7 +1,7 @@
 <template>
   <div id="nav" class="navigation">
     <div >
-      <router-link to="/" class="home nav" >Home</router-link> 
+      <router-link to="/" class="home nav" >Domů</router-link> 
     </div> 
     <div >
       <router-link to="/trasy" class="trasy nav" >TRASY</router-link>
@@ -30,6 +30,9 @@ export default {
     font-size: 22px;
     display: flex;
     justify-content: flex-end;
+    position: absolute;
+    width: 100vw
+    
     
     
   }
@@ -37,8 +40,11 @@ export default {
     display: flex;
     color:white;
     text-decoration: none;
-    margin-right: 40px;
-    padding: 15px
+    
+    padding: 15px 40px
   }
-  
+  .nav:hover{
+    background-color: black
+  }
+
 </style>

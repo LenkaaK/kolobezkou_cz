@@ -1,8 +1,8 @@
 <template>
   <div class="picture">
     <div class="container">
-      <h1>Koloběžkou.cz</h1>
-      <p>Ty nejlepší trasy v ČR. <br> Vaše cesta za poznáním může začít právě teď.</p>
+      <h1>koloběžkou.cz</h1>
+         <p>Ty nejlepší trasy v ČR. <br> Vaše cesta za poznáním může začít právě teď.</p>
     </div>
 
   </div>
@@ -23,13 +23,35 @@ export default {
   -moz--background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  
 }
 
 h1, p {
   text-align: center;
-  text-transform: uppercase;
+  
 }
+
+.container h1{
+  font-size: 80px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  text-transform: uppercase
+}
+.container p{
+  font-size: 24px;
+  margin: 0
+}
+
+.container{
+ position: absolute;
+ color: #eeeeee;
+ top: 20%;
+ width: 100%;
+ min-height: 260px;
+    
+
+}
+
 
 /* návod na vertikální vycentrování z netu
 .container {

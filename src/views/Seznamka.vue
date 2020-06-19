@@ -1,5 +1,9 @@
 <template>
   <div>
+    <header class="bgr_img">
+      <img src ="./../assets/images/intro_routes.jpeg" alt="hlavicka">
+    </header>
+    
     <div v-html="trasy[0].map" class="mapa"></div>
     <div class="trasapopis">
       <h2>{{trasy[0].name}}</h2>
