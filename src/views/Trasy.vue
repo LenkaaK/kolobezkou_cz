@@ -6,8 +6,9 @@
     </header>
     
       <main>
-
-        <h1>Zde si vyber trasu podle svých představ</h1>
+        <div class="main_heading">
+          <h1>Zde si vyber trasu podle svých představ</h1>
+       </div>
         <div class="filter">
           <vyhledavac />
         </div>
@@ -51,18 +52,11 @@ main{
   text-align: center;
 }
 
-main h1{
+.main_heading{
   margin: 53px
 }
 .roads_view{
   display: flex;
-  justify-content: space-between;
-  flex-shrink: 1;
-  flex-grow: 0;
-}
-
-.road{
-  flex-basis: 33%
   
 }
 

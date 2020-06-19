@@ -4,7 +4,9 @@
       <img src ="./../assets/images/intro_routes.jpeg" alt= "hlavicka">
     </header>
     
-      <h1>Detail trasy</h1>
+      <div class="main_heading">
+          <h1>Detail trasy</h1>
+       </div>
       
       <div v-html="trasy[0].map" class="mapa"></div>
     <div class="trasapopis">

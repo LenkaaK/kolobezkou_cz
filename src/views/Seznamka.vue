@@ -3,39 +3,41 @@
     <header class="bgr_img">
       <img src ="./../assets/images/intro_routes.jpeg" alt="hlavicka">
     </header>
-    
-    <div v-html="trasy[0].map" class="mapa"></div>
-    <div class="trasapopis">
-      <h2>{{trasy[0].name}}</h2>
-      <p>Hodnocení: {{trasy[0].stars}}</p>
+    <div class="main_heading">
+          <h1>Najdi svého parťáka</h1>
+       </div>
+        <div v-html="trasy[0].map" class="mapa"></div>
+        <div class="trasapopis">
+          <h2>{{trasy[0].name}}</h2>
+          <p>Hodnocení: {{trasy[0].stars}}</p>
 
-      <div class="inline">
-        <div><img src="./../assets/icons/distance01.svg" width="40px"></div>
-        <div><p>{{trasy[0].distance}} km / {{trasy[0].time}} hodin</p></div>
-      </div>
-      <p>{{trasy[0].ascent}} m</p>
+          <div class="inline">
+            <div><img src="./../assets/icons/distance01.svg" width="40px"></div>
+            <div><p>{{trasy[0].distance}} km / {{trasy[0].time}} hodin</p></div>
+          </div>
+          <p>{{trasy[0].ascent}} m</p>
 
 
-      <div>
-        <p
-        v-for="(trasa, index) in trasy[0].region"
-        v-bind:key="index"
-        class="inline"
-        >
-          {{trasa}}
-        </p>
-      </div>
+          <div>
+            <p
+            v-for="(trasa, index) in trasy[0].region"
+            v-bind:key="index"
+            class="inline"
+            >
+              {{trasa}}
+            </p>
+          </div>
 
-      <div>
-        <p
-        v-for="(trasa, index) in trasy[0].hashtags"
-        v-bind:key="index"
-        class="inline"
-        >
-          #{{trasa}}
-        </p>
-      </div>
-    </div>
+          <div>
+            <p
+            v-for="(trasa, index) in trasy[0].hashtags"
+            v-bind:key="index"
+            class="inline"
+            >
+              #{{trasa}}
+            </p>
+          </div>
+        </div>
         
       <!-- ZKOUŠKA GRAFU -->
     <figure class="pie-chart">
