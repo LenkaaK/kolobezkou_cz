@@ -30,12 +30,15 @@ export default {
 <style>
 
 .to_detail{
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   font-size: 16px;
   color: #eeeeee;
-  border: 1px solid #262b37;
   background-color: #262b37;
   padding: 6px 20px;
-  border-radius: 5px
+  border-radius: 5px;
+  cursor:pointer;
+  
+	border: 2px solid white;
 }
 .all_roads{
   margin: 30px
