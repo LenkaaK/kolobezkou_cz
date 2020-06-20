@@ -14,7 +14,7 @@
         </div>
          <div class="roads_view"> 
             <div class="road">
-              <road
+              <road 
                 v-for="trasa in trasy"
                 :key="trasa.id"
                 :id="trasa.id"
@@ -23,7 +23,7 @@
               />
             </div>
             
-               </div>
+        </div>
 
         
       </main>
@@ -55,6 +55,7 @@ export default {
 
 
 <style>
+
 .bgr_img img{
   display: block;
   width: 100%;
@@ -69,9 +70,14 @@ main{
 .main_heading{
   margin: 53px
 }
-.roads_view{
+.roads-view{
   display: flex;
   
 }
+.road{
+display: flex;
+flex-wrap: wrap;
+flex-basis:auto
 
+}
 </style>

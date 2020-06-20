@@ -8,9 +8,9 @@
           <div class="road_info">
             <h3 class="road_name">{{trasa.name}}</h3>
             <p class="road_distance">{{trasa.distance}} km / {{trasa.time}} hodin</p>
-            <p class="ascent">Převýšení</p>
-            <p class="road_region"> Region</p>
-            <p class="hashtag"> Hashtagy</p>
+            <p class="ascent">{{trasa.ascent}} m</p>
+            <p class="road_region">region</p>
+            <p class="hashtag"> {{trasa.hashtags}}</p>
         </div>
 
     <router-link :to="{name: 'Detail', params: {id: trasa.id}}">
@@ -41,13 +41,14 @@ export default {
 	border: 2px solid white;
 }
 .all_roads{
-  margin: 30px
+  margin: 20px 10px;
+  
 }
 .road_contain{
   background: white;
   border-radius: 0 0 10px 10px;
   padding-bottom: 20px;
-  width: 33%;
+  width: 350px;
   border: 1px solid #dbd8d8;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
