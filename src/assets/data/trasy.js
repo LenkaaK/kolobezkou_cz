@@ -1,6 +1,6 @@
 export default [
     {
-        id: 1,
+        id: "1",
         name: "Cyklostezka Bečva",
         distance: 100,
         ascent: 554,
@@ -34,7 +34,7 @@ export default [
 
     },
     {
-        id: 2,
+        id: "2",
         name: "Z Jeseníku do Rudy nad Moravou",
         distance: 46,
         ascent: 493,
@@ -68,7 +68,7 @@ export default [
 
     },
     {
-        id: 3,
+        id: "3",
         name: "Krajinou Jeseníků za Rejvízem",
         distance: 46,
         ascent: 493,
@@ -102,7 +102,7 @@ export default [
 
     },
     {
-        id: 4,
+        id: "4",
         name: "Z Aše až do Podolí",
         distance: 46,
         ascent: 493,
@@ -136,7 +136,7 @@ export default [
 
     },
     {
-        id: 5,
+        id: "5",
         name: "Z Jeseníku do Rudy nad Moravou",
         distance: 46,
         ascent: 493,
