@@ -3,8 +3,8 @@
     <div class="graf">
         <figure class="pie-chart">
             <figcaption>
-                Terén {{trasa.terrain.gravel}}%<span style="color:#00818a"></span><br>
-                Asfalt {{trasa.terrain.asphalt}}%<span style="color:#ec9b3b"></span>
+                Terén 95%<span style="color:#00818a"></span><br>
+                Asfalt 5%<span style="color:#ec9b3b"></span>
            </figcaption>
         </figure>
     </div>

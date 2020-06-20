@@ -51,16 +51,9 @@
           </div>
 
         </div>
-              
-        <div class="graf">
-          <figure class="pie-chart">
-            <figcaption>
-              Terén {{trasa.terrain.gravel}}%<span style="color:#00818a"></span><br>
-              Asfalt {{trasa.terrain.asphalt}}%<span style="color:#ec9b3b"></span>
-            </figcaption>
-          </figure>
+         <div class="graf">     
+        <graf v-bind:trasa="trasa"/>
         </div>
-
 
       </div>
         
@@ -71,10 +64,8 @@
   </div>
 </template>
 
-
-
 <script>
-
+import Graf from './../components/Graf.vue'
 import Mapa from './../components/Mapa.vue'
 import Galerie from './../components/Galerie.vue'
 import trasyData from './../assets/data/trasy.js';
@@ -85,19 +76,25 @@ function getTrasa (id) {
 export default {
     data() {
         return {
-            
+          trasa: null  
         }
     },
 
-    computed: {
-        trasa() {
-            return getTrasa(this.$route.params.id); 
+    methods: {
+        getTrasa() {
+          const id= this.$route.params.id;
+            this.trasa=trasyData.find(trasa=>""+trasa.id === id); 
         }
+    },
+
+    created(){
+      this.getTrasa()
     },
 
     components:{
       galerie: Galerie,
       mapa: Mapa,
+      graf: Graf,
     }
 
     /*beforeRouteEnter (to, from, next) {
@@ -154,47 +151,5 @@ export default {
     flex: 1 1 calc((100%-20px)/2);
   }
 
-  /* STYLOVÁNÍ GRAFU */
-
-  .pie-chart {
-    background:
-      radial-gradient(
-        circle closest-side,
-        #eee,
-        #eee 39.6%,
-        transparent 39.6%,
-        transparent 60%,
-        #eee 0
-      ),
-      conic-gradient(
-        #00818a 0,
-        #00818a 5%,
-        #ec9b3b 0,
-        #ec9b3b 100%
-    );
-    position: relative;
-    max-width: 500px;
-    min-height: 350px;
-    margin: 0;
-    /*outline: 1px solid #ccc;*/
-    background-color: red;
-  }
-  .pie-chart figcaption {
-    position: absolute;
-    bottom: 45%;
-    right: 42%;
-    font-size: smaller;
-    text-align: center;
-  }
-  .pie-chart span:after {
-    display: inline-block;
-    content: "";
-    width: 0.8em;
-    height: 0.8em;
-    margin-left: 0.4em;
-    height: 0.8em;
-    border-radius: 0.2em;
-    background: currentColor;
-  }
-
+  
 </style>
