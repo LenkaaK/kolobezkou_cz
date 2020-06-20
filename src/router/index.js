@@ -30,8 +30,8 @@ Vue.use(VueRouter)
     component: Seznamka
   },
   {
-    path: '/detail',
-    name: 'detail',
+    path: '/detail/:id',
+    name: 'Detail',
     component: Detail
   },
 ]

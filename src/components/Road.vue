@@ -6,14 +6,14 @@
           <img src="./../assets/images/foto-trasy/foto-001-01.jpeg">      
         </div>
           <div class="road_info">
-            <h3 class="road_name">Název trasy</h3>
-            <p class="road_distance">Vzdálenost /hodiny</p>
+            <h3 class="road_name">{{trasa.name}}</h3>
+            <p class="road_distance">{{trasa.distance}} km / {{trasa.time}} hodin</p>
             <p class="ascent">Převýšení</p>
             <p class="road_region"> Region</p>
             <p class="hashtag"> Hashtagy</p>
         </div>
 
-    <router-link to="/detail">
+    <router-link :to="{name: 'Detail', params: {id: trasa.id}}">
       <button class="to_detail">Chci vědět víc</button>
     </router-link>
     </div>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-
+  props: ["id", "trasa"]
 }
 </script>
 

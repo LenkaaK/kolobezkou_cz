@@ -31,7 +31,7 @@ export default {
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    width: 100vw
+    width: 100%;
     
     
     

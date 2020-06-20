@@ -14,7 +14,13 @@
         </div>
          <div class="roads_view"> 
             <div class="road">
-              <road/>
+              <road
+                v-for="trasa in trasy"
+                :key="trasa.id"
+                :id="trasa.id"
+                :trasa="trasa"
+
+              />
             </div>
             
                </div>
@@ -28,12 +34,20 @@
 </template>
 
 <script>
-import Vyhledavac from './../components/Vyhledavac.vue'
-import Road from './../components/Road.vue'
+import Vyhledavac from './../components/Vyhledavac.vue';
+import Road from './../components/Road.vue';
+import trasyData from './../assets/data/trasy.js';
+
 export default {
   components:{
     vyhledavac: Vyhledavac,
-    road: Road
+    road: Road,
+  },
+
+  data(){
+    return {
+      trasy: trasyData
+    }
   }
 
 }
