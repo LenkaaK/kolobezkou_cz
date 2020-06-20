@@ -11,7 +11,9 @@
 
       <h2>{{trasa.name}}</h2>
 
-      <div v-html="trasa.map" class="mapa"></div>
+      <div v-html="trasa.map" class="mapa">
+        <mapa />
+      </div>
 
       
 
@@ -61,13 +63,20 @@
 
 
       </div>
+        
+          <galerie />
+        
     </div>   
+
   </div>
 </template>
 
 
 
 <script>
+
+import Mapa from './../components/Mapa.vue'
+import Galerie from './../components/Galerie.vue'
 import trasyData from './../assets/data/trasy.js';
 function getTrasa (id) {
     return trasyData.find(trasa => trasa.id===id);
@@ -85,6 +94,11 @@ export default {
             return getTrasa(this.$route.params.id); 
         }
     },
+
+    components:{
+      galerie: Galerie,
+      mapa: Mapa,
+    }
 
     /*beforeRouteEnter (to, from, next) {
         const trasa = getTrasa(to.params.id)
