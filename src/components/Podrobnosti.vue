@@ -63,11 +63,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .info-podrobnosti{
         display: flex;
         flex-wrap: wrap;
-        
+        border: 1px solid $dark-blue;
+        padding: 20px;
+        margin: 35px 0;        
         
         
     }
@@ -82,8 +84,9 @@ export default {
         
     }
 
-    .info-icon2, .info-text{
-        margin: 7px 15px 7px 7px;
+    .info-icon2, 
+    .info-text2{
+        margin: 7px 20px 15px 7px;
     }
 
 
