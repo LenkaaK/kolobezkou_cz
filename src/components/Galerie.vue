@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h2>Já jsem fotka</h2>
+      
 
   </div>
 </template>

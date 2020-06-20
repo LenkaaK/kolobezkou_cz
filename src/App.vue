@@ -7,7 +7,11 @@
 
 
 <script>
-import Navigace from './components/Navigace.vue'
+import Vue from 'vue';
+import Navigace from './components/Navigace.vue';
+import Donut from 'vue-css-donut-chart';
+import 'vue-css-donut-chart/dist/vcdonut.css';
+Vue.use(Donut);
 
 export default {
   components:{

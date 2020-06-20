@@ -5,9 +5,7 @@
     </header>
 
     <div class="detail-stranka">
-      <div class="main_heading">
-        <h1>Najdi svého parťáka</h1>
-      </div>
+
 
       <h2>{{trasa.name}}</h2>
 
@@ -104,7 +102,7 @@ export default {
 
 h2 {
   text-align: center;
-  background-color: #293462;
+  background-color: $dark-blue;
   color: white;
   padding: 5px;
 }
