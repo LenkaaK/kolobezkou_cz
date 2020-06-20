@@ -52,7 +52,5 @@ export default {
     }
 }
 
-.info-ikona {
-    color: red;
-}
+
 </style>

@@ -24,7 +24,7 @@
 
       <podrobnosti v-bind:trasa="trasa" />
 
-      <galerie />
+      <galerie v-bind:trasa="trasa" />
     </div>
   </div>
 </template>
