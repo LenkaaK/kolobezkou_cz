@@ -1,26 +1,24 @@
 <template>
   <div>
-         <div class="info-row">
-        </div>
-           <div>
-               <div v-for= "(info, index) in trasa.info"
+         
+            <div class="info-podrobnosti">
+               <div class="info-row2" v-for= "(info, index) in trasa.info"
                 v-bind:key="'info-'+index">
-                {{info.text}}
-                <img src="./../assets/icons/about.svg" width="30px" alt="about-ikona">
-                
-                
+                    <div class="info-icon-text">
+                        <div class="info-icon2">
+                        <img v-bind:src="getIconType(info.type).src" width="30px" v-bind:alt="getIconType(info.type).alt">
+                        </div>
+                         <div class="info-text2">
+                        {{info.text}}
+                        </div>
+                    </div>
                 </div>
-                </div> 
-         
-         
-         
-        </div>
+            </div> 
+                
             
+  </div>      
         
-        
-
-
-  </div>
+ 
 </template>
 
 
@@ -34,19 +32,19 @@ export default {
         return{
             types:{
                 about:{
-                    src:"./../assets/icons/about.svg",
+                    src:require("./../assets/icons/about.svg"),
                     alt:"about-icon"
                 },
                 transport:{
-                    src:"./../assets/icons/transport.svg",
+                    src:require("./../assets/icons/transport.svg"),
                     alt:"transport-icon"
                 },
                 food:{
-                    src:"./../assets/icons/food.svg",
+                    src:require("./../assets/icons/food.svg"),
                     alt: "food-icon"
                 },
                 well:{
-                    src:"./..assets/icons/drink.svg",
+                    src:require("./../assets/icons/drink.svg"),
                     alt: "drink-icon"
                 }
 
@@ -55,11 +53,40 @@ export default {
             }
 
         }
+    }, 
+    methods:{
+        getIconType(type){
+            return this.types[type]
+        }
     }
 
 }
 </script>
 
-<style>
+<style scoped>
+    .info-podrobnosti{
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+        
+    }
+    .info-row2{
+        display: flex;
+        flex-basis: 50%;
+        
+    }
+
+    .info-icon-text{
+        display: flex;
+        
+    }
+
+    .info-icon2, .info-text{
+        margin: 7px 15px 7px 7px;
+    }
+
+
+
 
 </style>
