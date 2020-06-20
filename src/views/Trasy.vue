@@ -50,9 +50,7 @@ export default {
   height: auto;
 }
 
-main {
-  text-align: center;
-}
+
 
 .main_heading {
   margin: 53px;

@@ -5,8 +5,6 @@
     </header>
 
     <div class="detail-stranka">
-
-
       <h2>{{trasa.name}}</h2>
 
       <div v-html="trasa.map" class="mapa">
@@ -17,16 +15,15 @@
         <div class="info">
           <p>Hodnocení: {{trasa.stars}}</p>
 
-        <basicinfo v-bind:trasa="trasa" />
-          
+          <basicinfo v-bind:trasa="trasa" />
         </div>
         <div class="graf">
-          <graf v-bind:trasa="trasa" />
+          <graf v-bind:trasa="trasa" v-bind:pozadi="'#eeeeee'" />
         </div>
       </div>
-      
-      <podrobnosti v-bind:trasa="trasa"/>
-      
+
+      <podrobnosti v-bind:trasa="trasa" />
+
       <galerie />
     </div>
   </div>
@@ -127,5 +124,4 @@ h2 {
 .graf {
   flex: 1 1 calc((100%-20px) / 2);
 }
-
 </style>

@@ -2,7 +2,7 @@
   <div>
     <div class="graf">
       <vc-donut
-        background="#eeeeee"
+        :background="pozadi"
         foreground="grey"
         :size="75"
         unit="%"
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  props: ["trasa"],
+  props: ["trasa", "pozadi"],
 
   data() {
     return {

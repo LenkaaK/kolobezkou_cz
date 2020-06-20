@@ -5,16 +5,21 @@
         <div class="road_image">
           <img src="./../assets/images/foto-trasy/foto-001-01.jpeg" />
         </div>
+        <h3 class="road_name">{{trasa.name}}</h3>
+
+        <div class="optical-row">
+          <img src="./../assets/icons/blackCR.png" width="50px" class="optical-ikona" />
+
+          <div class="graf">
+            <graf v-bind:trasa="trasa" v-bind:pozadi="'white'" />
+          </div>
+        </div>
+
         <div class="road_info">
-          <h3 class="road_name">{{trasa.name}}</h3>
           <basicinfo v-bind:trasa="trasa" />
         </div>
 
-        <div class="graf">
-          <graf v-bind:trasa="trasa" />
-        </div>
-
-        <router-link :to="{name: 'Detail', params: {id: trasa.id}}">
+        <router-link :to="{name: 'Detail', params: {id: trasa.id}}" class="router-link">
           <button class="to_detail">Chci vědět víc</button>
         </router-link>
       </div>
@@ -35,16 +40,21 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 .to_detail {
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  // box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   font-size: 16px;
   color: #eeeeee;
-  background-color: #262b37;
+  background-color: $dark-blue;
   padding: 6px 20px;
   border-radius: 5px;
   cursor: pointer;
-  }
+  
+  border: none;
+}
+.router-link {
+  text-align: center;
+}
 .all_roads {
   margin: 30px;
 }
@@ -66,12 +76,31 @@ export default {
 .road_name {
   margin: 0;
   color: #eeeeee;
-  background-color: #262b37;
+  background-color: $dark-blue;
   padding: 5px;
 }
 
-.graf{
-  width: 200px;
+.graf {
+  max-width: 130px;
   height: auto;
 }
+
+.optical-row {
+  display: flex;
+  margin: 5px;
+}
+
+.optical-ikona,
+.graf {
+  flex: 1 1 50%;
+}
+
+.road_info {
+  margin-left: 10px;
+}
+
+h3 {
+  text-align: center;
+}
+
 </style>

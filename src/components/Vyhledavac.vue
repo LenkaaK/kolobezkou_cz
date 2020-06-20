@@ -60,10 +60,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 .filter{
     display: flex; 
-    background-color: #262b37;
+    background-color: $dark-blue;;
     padding: 1px;
     
 
