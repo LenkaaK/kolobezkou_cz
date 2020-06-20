@@ -10,7 +10,7 @@
           <basicinfo v-bind:trasa="trasa" />
         </div>
 
-        <div>
+        <div class="graf">
           <graf v-bind:trasa="trasa" />
         </div>
 
@@ -44,9 +44,7 @@ export default {
   padding: 6px 20px;
   border-radius: 5px;
   cursor: pointer;
-
-  border: 2px solid white;
-}
+  }
 .all_roads {
   margin: 30px;
 }
@@ -70,5 +68,10 @@ export default {
   color: #eeeeee;
   background-color: #262b37;
   padding: 5px;
+}
+
+.graf{
+  width: 200px;
+  height: auto;
 }
 </style>

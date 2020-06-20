@@ -13,7 +13,7 @@
         <vyhledavac />
       </div>
 
-      <div class="roads_view">
+      <div class="road_view">
         <div class="road">
           <road v-for="trasa in trasy" :key="trasa.id" :id="trasa.id" :trasa="trasa" />
         </div>
@@ -57,13 +57,16 @@ main {
 .main_heading {
   margin: 53px;
 }
-.roads_view {
-  display: flex;
+.road_view{
+  width: 90%;
+  margin: 0 auto;
 }
 .road{
+width: 90%;
+margin: 0 auto;
 display: flex;
 flex-wrap: wrap;
-flex-basis:auto
+flex-basis: 30%
 
 }
 </style>
