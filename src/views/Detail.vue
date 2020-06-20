@@ -24,7 +24,9 @@
           <graf v-bind:trasa="trasa" />
         </div>
       </div>
-
+      
+      <podrobnosti v-bind:trasa="trasa"/>
+      
       <galerie />
     </div>
   </div>
@@ -36,6 +38,7 @@ import Mapa from "./../components/Mapa.vue";
 import Galerie from "./../components/Galerie.vue";
 import trasyData from "./../assets/data/trasy.js";
 import BasicInfo from "./../components/BasicInfo.vue";
+import Podrobnosti from "./../components/Podrobnosti.vue";
 
 function getTrasa(id) {
   return trasyData.find(trasa => trasa.id === id);
@@ -69,7 +72,8 @@ export default {
     galerie: Galerie,
     mapa: Mapa,
     graf: Graf,
-    basicinfo: BasicInfo
+    basicinfo: BasicInfo,
+    podrobnosti: Podrobnosti
   }
 
   /*beforeRouteEnter (to, from, next) {

@@ -1,7 +1,6 @@
 <template>
   <div>
-     
-     <div class="filter">
+      <div class="filter">
           <div class="region">
                <select v-model= "region">
                     <option value="start"> Vyber region </option>
