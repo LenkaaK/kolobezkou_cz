@@ -13,7 +13,7 @@ export default {
   components:{
     navigace: Navigace
   }
-   
+
 }
 </script>
 
@@ -30,10 +30,11 @@ html { box-sizing: border-box; }
 
 
   body{
-    margin: 0;  
+    margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color:#eeeeee
+    background-color:#eeeeee;
+    color: $text-color;
   }
 
   #app {
