@@ -30,9 +30,8 @@
             <select v-model="distance">
               <option value="start">Vzdálenost</option>
               <option value="30">do 30km</option>
-              <option value="d60">do 60km</option>
+              <option value="d60">30km - 60km</option>
               <option value="n60">nad 60km</option>
-              <option value="days">vícedenní</option>
             </select>
           </div>
           <div class="ascent">
@@ -42,6 +41,17 @@
               <option value="d1000">do 1000m</option>
               <option value="n1000">nad 1000m</option>
             </select>
+          </div>
+          <div class="key_words">
+            <label for="keyWords">
+              Zadej klíčová slova
+              <input
+                id="keyWords"
+                type="text"
+                placeholder="Olomouc"
+                v-model="keyWords"
+              />
+            </label>
           </div>
         </div>
       </div>
@@ -73,25 +83,59 @@ export default {
       trasy: trasyData,
       region: "start",
       distance: "start",
-      ascent: "start"
+      ascent: "start",
+      keyWords: ""
     };
   },
 
   computed: {
-    filtrovaneTrasy(){
-      return this.filtrujRegion(this.trasy);
+    filtrovaneTrasy() {
+      return this.trasy
+        .filter(this.isFilterDistance)
+        .filter(this.isFilterRegion)
+        .filter(this.isFilterAscent)
+        .filter(this.isFilterKeyWord);
     }
   },
 
   methods: {
-    filtrujRegion (trasy) {
-      if (this.region === "start") {
-        return trasy;
-      } else {
-        return trasy.filter(trasa => (trasa.region[0] === this.region) || (trasa.region[1] === this.region) || (trasa.region[2] === this.region));
+    isFilterDistance(trasa) {
+      if (this.distance === "start") {
+        return true;
       }
+      if (this.distance === "30") {
+        return trasa.distance <= 30;
+      } else if (this.distance === "d60") {
+        return trasa.distance > 30 && trasa.distance <= 60;
+      } else {
+        return trasa.distance > 60;
+      }
+    },
+    isFilterRegion(trasa) {
+      if (this.region === "start") {
+        return true;
+      }
+      return trasa.region.some(region => region === this.region);
+    },
+    isFilterAscent(trasa) {
+      if (this.ascent === "start") {
+        return true;
+      }
+      if (this.ascent === "n500") {
+        return trasa.ascent <= 500;
+      } else if (this.ascent === "d1000") {
+        return trasa.ascent > 500 && trasa.ascent <= 1000;
+      }
+      return trasa.ascent > 1000;
+    },
+
+    isFilterKeyWord(trasa) {
+      if (this.keyWords === "") {
+        return true;
+      }
+      const allKeyWords = [...trasa.keywords, ...trasa.hashtags];
+      return allKeyWords.some(keyword => keyword.toLowerCase().startsWith(this.keyWords.toLowerCase()));
     }
-    
   }
 };
 </script>
@@ -109,17 +153,19 @@ export default {
   flex-wrap: wrap;
   flex-basis: 30%;
 }
-.filter{
-    display: flex; 
-    background-color: $dark-blue;;
-    padding: 1px;
-    
-
+.filter {
+  display: flex;
+  background-color: $dark-blue;
+  padding: 1px;
 }
 
-
-select{
-     padding: 7px; 
-     margin: 10px;
+select {
+  padding: 7px;
+  margin: 10px;
+}
+.key_words {
+  padding: 7px;
+  margin: 10px;
+  color: white;
 }
 </style>
