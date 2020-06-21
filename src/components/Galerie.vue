@@ -1,37 +1,48 @@
 <template>
   <div>
-    <agile>
-      <div class="slide" v-for="foto in trasa.photo" v-bind:key="foto.id" >
+    <agile @after-change="e => currentSlide = e.currentSlide">
+      <div class="slide" v-for="foto in trasa.photo" v-bind:key="foto.picture" >
         <img v-bind:src="require(`./../assets/images/foto-trasy/${foto.picture}.jpeg`)" v-bind:alt="foto.alt" />
       </div>
 
-      <!-- <div class="slide">
-        <img src="./../assets/images/foto-trasy/foto-001-02.jpeg" alt="foto02" />
-      </div>
-      <div class="slide">
-        <img src="./../assets/images/foto-trasy/foto-001-03.jpeg" alt="foto03" />
-      </div>
-      <div class="slide">
-        <img src="./../assets/images/foto-trasy/foto-001-04.jpeg" alt="foto04" />
-      </div> -->
-
       <template slot="prevButton">
-        <i class="fas fa-chevron-left"></i>
+        <img src="./../assets/icons/vlevo.svg" width="50px" />
       </template>
       <template slot="nextButton">
-        <i class="fas fa-chevron-right"></i>
+        <img src="./../assets/icons/vpravo.svg" width="50px" />
       </template>
+      
     </agile>
+
+    <!-- <agile ref="agile2" :as-nav-for="[$refs.agile2]">
+      <div v-for="foto in trasa.photo" v-bind:key="`1${foto.picture}`" >
+        <p>{{foto.text}}</p>
+      </div>
+    </agile> -->
+
+    <div>
+      <p>{{trasa.photo[currentSlide].text}}</p>
+    </div>
+
   </div>
 </template>
 
 <script>
 export default {
-  props: ["trasa"]
+  props: ["trasa"],
+
+  data() {
+    return {
+      currentSlide: 0,
+    }
+  }
+
+
 };
 </script>
 
 <style lang="scss">
+
 .agile__nav-button {
   background: transparent;
   border: none;
