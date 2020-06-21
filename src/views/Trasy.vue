@@ -38,7 +38,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped lang="scss">
 
 .road_view{
   width: 90%;

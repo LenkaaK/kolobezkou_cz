@@ -1,9 +1,6 @@
 <template>
   <div>
-    <header class="bgr_img">
-      <img src="./../assets/images/intro_routes.jpeg" alt="hlavicka" />
-    </header>
-
+    <headerImage />
     <div class="detail-stranka">
       <h2>{{trasa.name}}</h2>
 
@@ -36,6 +33,7 @@ import Galerie from "./../components/Galerie.vue";
 import trasyData from "./../assets/data/trasy.js";
 import BasicInfo from "./../components/BasicInfo.vue";
 import Podrobnosti from "./../components/Podrobnosti.vue";
+import headerImage from "./../components/HeaderImage.vue"
 
 function getTrasa(id) {
   return trasyData.find(trasa => trasa.id === id);
@@ -70,7 +68,8 @@ export default {
     mapa: Mapa,
     graf: Graf,
     basicinfo: BasicInfo,
-    podrobnosti: Podrobnosti
+    podrobnosti: Podrobnosti,
+    headerImage: headerImage,
   }
 
   /*beforeRouteEnter (to, from, next) {
