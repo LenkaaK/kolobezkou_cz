@@ -1,14 +1,7 @@
 <template>
   <div class="roads">
-    <header class="bgr_img">
-      <img src="./../assets/images/intro_routes.jpeg" alt="hlavicka" />
-    </header>
-
+    <headerImage v-bind:nadpis= "'Zde si vyber trasu podle svých představ'" />
     <main>
-      <div class="main_heading">
-        <h1>Zde si vyber trasu podle svých představ</h1>
-      </div>
-
       <div class="filter">
         <vyhledavac />
       </div>
@@ -24,6 +17,7 @@
 </template>
 
 <script>
+import headerImage from './../components/HeaderImage'
 import Vyhledavac from "./../components/Vyhledavac.vue";
 import Road from "./../components/Road.vue";
 import trasyData from "./../assets/data/trasy.js";
@@ -31,7 +25,8 @@ import trasyData from "./../assets/data/trasy.js";
 export default {
   components: {
     vyhledavac: Vyhledavac,
-    road: Road
+    road: Road,
+    headerImage,
   },
 
   data() {
@@ -44,17 +39,7 @@ export default {
 
 
 <style>
-.bgr_img img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
-
-
-.main_heading {
-  margin: 53px;
-}
 .road_view{
   width: 90%;
   margin: 0 auto;

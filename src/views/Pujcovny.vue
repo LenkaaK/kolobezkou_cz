@@ -1,40 +1,39 @@
 <template>
   <div>
-    <header class="bgr_img">
-      <img src ="./../assets/images/intro_routes.jpeg" alt="hlavicka">
-    </header>
-     <div class="main_heading">
-          <h1>Tady bude mapa půjčoven</h1>
-       </div>
-        <div id="mapa">
+    <headerImage v-bind:nadpis= "'Půjčovny'" />
+        <div class="main_heading">
+         </div>
+        <div class="rental_map" id="mapa">
             <l-map
             :zoom= "zoom"
             :center= "center"
-            style= "height: 400px">
+            style= "height: 750px">
           <l-tile-layer
         :url="url"
         :attribution="attribution"
       />
       <l-marker :lat-lng= "center">
         <l-tooltip :options= "{permanent:true}">
-            centrum Brnéčka
+            Půjčovna
         </l-tooltip>
 
       </l-marker >
-    <l-marker :lat-lng= "czechitas">
+    <l-marker :lat-lng= "kolobky">
+      
+      
        <l-popup>
-
-           <h3 class= "mojeBarva">Czechití house</h3>
-           <p>Czechití house</p>
+          <l-icon
+                    :icon-size="[50, 50]"
+                    :icon-anchor="[44, 44]"
+                    :icon-url="require('./../assets/icons/service.svg')"
+                  />
+           <h3 class= "mojeBarva">Půjčovna a prodejna</h3>
+           <a href="http://kolobky.cz/">Kolobky.cz</a>
        </l-popup>
 
+      
       </l-marker >
-
-
-
-
-
-            </l-map>
+      </l-map>
 
 
         </div>
@@ -42,31 +41,39 @@
   </div>
 </template>
 <script>
+import HeaderImage from './../components/HeaderImage.vue';
 import { latLng } from "leaflet";
-import { LMap, LTileLayer, LMarker, LPopup, LTooltip } from "vue2-leaflet";
+import { LMap, LTileLayer, LMarker, LPopup, LTooltip, LIcon } from "vue2-leaflet";
 export default {
     components: {
         LMap, 
         LTileLayer, 
         LMarker, 
         LPopup, 
-        LTooltip
+        LTooltip,
+        LIcon,
+        HeaderImage,
 
     },
     data(){
         return{
-            zoom: 13,
-            center: latLng(49.19506, 16.60684),
+            zoom: 8,
+            center: latLng(49.8888882, 15.4749003),
             url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-            czechitas: latLng(49.18558,16.62565)
+            kolobky: latLng(49.18925,16.60277)
         }
     }
 
 }
 </script>
 
-<style>
+<style scoped lang="scss">
  .mojeBarva{
-     color: hotpink;
+     color: $dark-blue;
+ }
+ .rental_map{
+   width: 1250px;
+   margin: 50px auto 50px auto;
+
  }
 </style>
