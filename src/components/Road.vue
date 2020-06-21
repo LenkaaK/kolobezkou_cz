@@ -3,7 +3,7 @@
     <div class="all_roads">
       <div class="road_contain">
         <div class="road_image">
-          <img src="./../assets/images/foto-trasy/foto-001-01.jpeg" />
+          <img v-bind:src="require(`./../assets/images/foto-trasy/${trasa.photo[0].picture}.jpeg`)" />
         </div>
         <h3 class="road_name">{{trasa.name}}</h3>
 

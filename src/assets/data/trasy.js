@@ -58,7 +58,7 @@ export default [
         ],
         
         photo: [
-            {picture: "foto-001-01", alt: "Chaty na Valašsku", text: "Chaty ve Valašském stylu."},
+            {picture: "foto-002-01", alt: "Chaty na Valašsku", text: "Chaty ve Valašském stylu."},
             {picture: "foto-001-02", alt: "Cyklostezka Bečva", text: "V dáli pohled na Radhošť. Většina cesty vede po takto krásných cyklostezkách."},
             {picture: "foto-001-03", alt: "Vodní nádrž Horní Bečva", text: "Vodní nádrž Horní Bečva postavena v letech 1933 - 1947."},
             {picture: "foto-001-04", alt: "Cyklostezka Bečva", text: "Mezi Horní Bečvou a Třeštíkem."},
