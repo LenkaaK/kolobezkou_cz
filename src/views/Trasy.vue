@@ -5,7 +5,6 @@
       <div class="filter">
         <vyhledavac />
       </div>
-
       <div class="road_view">
         <div class="road">
           <road v-for="trasa in trasy" :key="trasa.id" :id="trasa.id" :trasa="trasa" />

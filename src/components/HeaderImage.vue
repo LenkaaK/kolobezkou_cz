@@ -26,14 +26,18 @@ export default {
   color:black;
  
 }
+.bgr_img{
+  position:relative;
+}
 
 h1{
   margin:0;
   position: absolute;
   color: white;
-  top:108px;
+  top:40%;
   text-align: center;
   width: 100%;
   font-weight: 400;
+  font-size: 2em;
   }
 </style>
