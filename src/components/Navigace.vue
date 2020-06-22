@@ -42,7 +42,7 @@ export default {
     color:white;
     text-decoration: none;
     
-    padding: 15px 40px
+    padding: 15px 35px
   }
   .nav:hover{
     background-color: black

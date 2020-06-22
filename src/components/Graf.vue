@@ -11,7 +11,7 @@
         :sections="sections"
         :total="100"
         :start-angle="0"
-        :auto-adjust-text-size="true"
+        :auto-adjust-text-size="false"
         @section-mouseover="handleSectionMouseover"
         @section-mouseout="handleSectionMouseout"
       >
@@ -27,7 +27,7 @@ export default {
 
   data() {
     return {
-      contentLabel: ""
+      contentLabel: "Povrch"
     };
   },
 
@@ -46,11 +46,12 @@ export default {
     },
 
     handleSectionMouseout(section, event) {
-        this.contentLabel="";
+        this.contentLabel="Povrch";
     }
   }
 };
 </script>
 
-<style>
+<style scoped>
+
 </style>

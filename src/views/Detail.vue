@@ -15,7 +15,7 @@
           <basicinfo v-bind:trasa="trasa" />
         </div>
         <div class="graf">
-          <graf v-bind:trasa="trasa" v-bind:pozadi="'#eeeeee'" />
+          <graf v-bind:trasa="trasa" v-bind:pozadi="'#eeeeee'" v-bind:velikost="'16px'"/>
         </div>
       </div>
 

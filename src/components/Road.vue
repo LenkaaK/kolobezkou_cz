@@ -8,7 +8,7 @@
         <h3 class="road_name">{{trasa.name}}</h3>
 
         <div class="optical-row">
-          <img src="./../assets/icons/blackCR.png" width="50px" class="optical-ikona" />
+          <img src="./../assets/icons/blankCR.svg" width="100px" class="optical-ikona" />
 
           <div class="graf">
             <graf v-bind:trasa="trasa" v-bind:pozadi="'white'" />
@@ -19,9 +19,11 @@
           <basicinfo v-bind:trasa="trasa" />
         </div>
 
-        <router-link :to="{name: 'Detail', params: {id: trasa.id}}" class="router-link">
-          <button class="to_detail">Chci vědět víc</button>
-        </router-link>
+        <div class="chci-vic">
+          <router-link :to="{name: 'Detail', params: {id: trasa.id}}" class="router-link">
+            <button class="to_detail">Chci vědět víc</button>
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -43,25 +45,27 @@ export default {
 <style scoped lang="scss">
 .to_detail {
   // box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-  font-size: 16px;
+  font-size: 18px;
   color: #eeeeee;
   background-color: $dark-blue;
-  padding: 6px 20px;
+  padding: 10px 30px;
+  margin: 10px;
   border-radius: 5px;
   cursor: pointer;
-  
   border: none;
 }
-.router-link {
+
+.chci-vic{
   text-align: center;
 }
+
 .all_roads {
-  margin: 30px;
+  margin: 20px;
 }
 .road_contain {
   background: white;
-  border-radius: 0 0 10px 10px;
-  padding-bottom: 20px;
+  border-radius: 10px;
+  padding-bottom: 15px;
   width: 350px;
   border: 1px solid #dbd8d8;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -71,6 +75,7 @@ export default {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 10px 10px 0 0;
 }
 
 .road_name {
@@ -80,27 +85,29 @@ export default {
   padding: 5px;
 }
 
-.graf {
-  max-width: 130px;
-  height: auto;
-}
-
 .optical-row {
   display: flex;
-  margin: 5px;
+  margin: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .optical-ikona,
 .graf {
-  flex: 1 1 50%;
+  flex: 0 1 50%;
+}
+
+.graf {
+  max-width: 120px;
+  height: auto;
+  font-size: 14px;
 }
 
 .road_info {
-  margin-left: 10px;
+  margin: 10px 15px;
 }
 
 h3 {
   text-align: center;
 }
-
 </style>

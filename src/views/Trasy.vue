@@ -5,7 +5,7 @@
       <div class="filter">
         <div class="filter">
           <div class="region">
-            <select v-model="region">
+            <select v-model="region" class="select">
               <option value="start">Vyber region</option>
               <option value="Praha">Praha</option>
               <option value="Střední Čechy">Střední Čechy</option>
@@ -27,7 +27,7 @@
             </select>
           </div>
           <div class="distance">
-            <select v-model="distance">
+            <select v-model="distance" class="select">
               <option value="start">Vzdálenost</option>
               <option value="30">do 30km</option>
               <option value="d60">30km - 60km</option>
@@ -35,16 +35,16 @@
             </select>
           </div>
           <div class="ascent">
-            <select v-model="ascent">
+            <select v-model="ascent" class="select">
               <option value="start">Převýšení</option>
               <option value="n500">do 500</option>
               <option value="d1000">do 1000m</option>
               <option value="n1000">nad 1000m</option>
             </select>
           </div>
-          <div class="key_words">
+          <div class="key_words slect">
             <label for="keyWords">
-              Zadej klíčová slova
+              Hledej klíčová slova
               <input
                 id="keyWords"
                 type="text"
@@ -55,11 +55,12 @@
           </div>
         </div>
       </div>
-      <div class="road_view">
-        <div class="road">
-          <road v-for="trasa in filtrovaneTrasy" :key="trasa.id" :id="trasa.id" :trasa="trasa" />
+
+    
+        <div class="road-container">
+          <road v-for="trasa in filtrovaneTrasy" :key="trasa.id" :id="trasa.id" :trasa="trasa" class="road-item"/>
         </div>
-      </div>
+   
     </main>
   </div>
 </template>
@@ -133,7 +134,9 @@ export default {
         return true;
       }
       const allKeyWords = [...trasa.keywords, ...trasa.hashtags];
-      return allKeyWords.some(keyword => keyword.toLowerCase().startsWith(this.keyWords.toLowerCase()));
+      return allKeyWords.some(keyword =>
+        keyword.toLowerCase().startsWith(this.keyWords.toLowerCase())
+      );
     }
   }
 };
@@ -141,17 +144,25 @@ export default {
 
 
 <style scoped lang="scss">
-.road_view {
-  width: 90%;
-  margin: 0 auto;
+
+.select {
+  font-size: 16px;
+  color: $text-color;
+  background-color: #eeeeee;
+  padding: 10px 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
-.road {
+
+.road-container {
   width: 90%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 30%;
+  justify-content: space-around;
+  align-items: stretch;
 }
+
 .filter {
   display: flex;
   background-color: $dark-blue;
