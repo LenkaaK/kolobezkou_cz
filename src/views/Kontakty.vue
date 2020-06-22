@@ -5,6 +5,10 @@
       <div class="paragrafs">
       <p>Projeli jste naši trasu? Podělte se s námi o zážitky, fotky a doplňující informace.</p>
       <p>Projeli jste nějakou zajímavou trasu, kterou na našich stránkách ještě nemáme? Dejte nám o ní vědět.</p>
+      <div class="mail_icon">
+        <img src="./../assets/icons/mail.svg" width="30px" class="mail-ikona" /> 
+        <a href="mailto:footbikescz@gmail.cz"> footbikescz@gmail.cz</a >
+      </div>
       </div>
     <hr>
     <div class="designers">
@@ -17,7 +21,6 @@
       <img src="./../assets/images/lenka.jpg" alt="lenka" >
       </div>
       </div>
-      <img src="./../assets/icons/mail.svg" width="30px" class="mail-ikona" />
     </div>
   <paticka />
     
@@ -49,6 +52,9 @@ export default {
   justify-content: space-between;
   width: 40%;
   margin: 50px auto;
+  h3{
+    color: $dark-blue;
+  }
   
   
   img{
@@ -59,6 +65,19 @@ export default {
   h3{
     margin-top:0;
     margin-bottom: 10px
+  }
+}
+.mail_icon{
+  display: flex;
+  justify-content: center;
+  
+  
+  a{
+  text-decoration: none;
+  margin: 10px
+  }
+  a:hover{
+    color: $light-blue;
   }
 }
 </style>
