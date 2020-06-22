@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Trasy from '../views/Trasy.vue'
 import Pujcovny from '../views/Pujcovny.vue'
-import Seznamka from '../views/Seznamka.vue'
+import Kontakty from '../views/Kontakty.vue'
 import Detail from '../views/Detail.vue'
 
 Vue.use(VueRouter)
@@ -25,9 +25,9 @@ Vue.use(VueRouter)
     component: Pujcovny
   },
   {
-    path: '/seznamka',
-    name: 'Seznamka',
-    component: Seznamka
+    path: '/kontakty',
+    name: 'Kontakty',
+    component: Kontakty
   },
   {
     path: '/detail/:id',

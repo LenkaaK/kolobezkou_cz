@@ -46,7 +46,7 @@ export default {
 .to_detail {
   // box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   font-size: 18px;
-  color: #eeeeee;
+  color: $light-text-color;
   background-color: $dark-blue;
   padding: 10px 30px;
   margin: 10px;

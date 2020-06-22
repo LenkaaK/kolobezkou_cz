@@ -1,16 +1,16 @@
 <template>
   <div id="nav" class="navigation">
-    <div >
+    <div class="home_nav">
       <router-link to="/" class="home nav" >Domů</router-link> 
     </div> 
     <div >
       <router-link to="/trasy" class="trasy nav" >TRASY</router-link>
     </div>
-    <div>
-      <router-link to="/seznamka" class="seznamka nav">Seznamka</router-link>
-    </div>
     <div >
       <router-link to="/pujcovny" class= "pujcovny nav" >Půjčovny</router-link>
+    </div>
+    <div>
+      <router-link to="/kontakty" class="kontakty nav">Kontakty</router-link>
     </div>
     
   </div>
@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 
   .navigation{
@@ -39,13 +39,13 @@ export default {
   }
   .nav{
     display: flex;
-    color:white;
+    color:$light-text-color;
     text-decoration: none;
-    
     padding: 15px 35px
   }
   .nav:hover{
     background-color: black
   }
+ 
 
 </style>

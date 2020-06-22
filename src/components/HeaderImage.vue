@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss"> 
 
 .bgr_img img {
   display: block;
@@ -33,8 +33,8 @@ export default {
 h1{
   margin:0;
   position: absolute;
-  color: white;
-  top:40%;
+  color: $light-text-color;
+  top:45%;
   text-align: center;
   width: 100%;
   font-weight: 400;

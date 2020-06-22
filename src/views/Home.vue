@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style >
+<style lang="scss" >
 
 
 .picture {
@@ -44,7 +44,7 @@ h1, p {
 
 .container{
  position: absolute;
- color: #eeeeee;
+ color: $light-text-color;
  top: 20%;
  width: 100%;
  min-height: 260px;

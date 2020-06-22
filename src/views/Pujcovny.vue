@@ -3,7 +3,7 @@
     <headerImage v-bind:nadpis="'Půjčovny'" />
     <div class="main_heading"></div>
     <div class="rental_map" id="mapa">
-      <l-map :zoom="zoom" :center="center" style="height: 750px">
+      <l-map :zoom="zoom" :center="center" style="height:rental_map">
         <l-tile-layer :url="url" />
         <pujcovna-data v-for="(pujcovna, index) in data"
         v-bind:key="index" 
@@ -13,9 +13,11 @@
          />
       </l-map>
     </div>
+    <paticka />
   </div>
 </template>
 <script>
+import Paticka from './../components/Paticka.vue'
 import PujcovnaData from './../components/PujcovnaData.vue'
 import PujcovnyInfo from './../assets/data/pujcovny'
 import HeaderImage from "./../components/HeaderImage.vue";
@@ -37,13 +39,14 @@ export default {
     LTooltip,
     LIcon,
     HeaderImage,
-    PujcovnaData
+    PujcovnaData,
+    Paticka
     
   },
 
   data() {
     return {
-      zoom: 8,
+      zoom: 7,
       center: latLng(49.8888882, 15.4749003),
       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       data: PujcovnyInfo
@@ -57,7 +60,8 @@ export default {
   color: $dark-blue;
 }
 .rental_map {
-  width: 1250px;
+  height: 500px;
+  width: 920px;
   margin: 50px auto 50px auto;
 }
 </style>

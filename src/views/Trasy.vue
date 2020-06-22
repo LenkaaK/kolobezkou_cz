@@ -59,10 +59,12 @@
         />
       </div>
     </main>
+    <paticka />
   </div>
 </template>
 
 <script>
+import Paticka from './../components/Paticka.vue'
 import headerImage from "./../components/HeaderImage";
 import Vyhledavac from "./../components/Vyhledavac.vue";
 import Road from "./../components/Road.vue";
@@ -72,7 +74,8 @@ export default {
   components: {
     vyhledavac: Vyhledavac,
     road: Road,
-    headerImage
+    headerImage,
+    Paticka
   },
 
   data() {
