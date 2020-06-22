@@ -53,6 +53,10 @@ export default {
   border-radius: 5px;
   cursor: pointer;
   border: none;
+  position: absolute;
+  z-index: 20000;
+  left: 80px;
+  bottom: 17px;
 }
 
 .chci-vic{
@@ -69,6 +73,8 @@ export default {
   width: 350px;
   border: 1px solid #dbd8d8;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  height: 720px;
+  position: relative;
 }
 
 .road_image img {

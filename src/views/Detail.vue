@@ -10,7 +10,7 @@
 
       <div class="trasapopis">
         <div class="info">
-          <p>Hodnocení: {{trasa.stars}}</p>
+          
 
           <basicinfo v-bind:trasa="trasa" />
         </div>
