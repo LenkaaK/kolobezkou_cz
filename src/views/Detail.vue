@@ -1,8 +1,9 @@
 <template>
   <div>
     <headerImage />
+    <h2>{{trasa.name}}</h2>
     <div class="detail-stranka">
-      <h2>{{trasa.name}}</h2>
+      
 
       <div v-html="trasa.map" class="mapa">
         <mapa />
@@ -10,8 +11,6 @@
 
       <div class="trasapopis">
         <div class="info">
-          
-
           <basicinfo v-bind:trasa="trasa" />
         </div>
         <div class="graf">
@@ -23,6 +22,7 @@
 
       <galerie v-bind:trasa="trasa" />
     </div>
+    <paticka />
   </div>
 </template>
 
@@ -33,7 +33,8 @@ import Galerie from "./../components/Galerie.vue";
 import trasyData from "./../assets/data/trasy.js";
 import BasicInfo from "./../components/BasicInfo.vue";
 import Podrobnosti from "./../components/Podrobnosti.vue";
-import headerImage from "./../components/HeaderImage.vue"
+import headerImage from "./../components/HeaderImage.vue";
+import Paticka from './../components/Paticka.vue'
 
 function getTrasa(id) {
   return trasyData.find(trasa => trasa.id === id);
@@ -70,6 +71,7 @@ export default {
     basicinfo: BasicInfo,
     podrobnosti: Podrobnosti,
     headerImage: headerImage,
+    paticka: Paticka
   }
 
   /*beforeRouteEnter (to, from, next) {
@@ -83,7 +85,7 @@ export default {
 
 <style scoped lang="scss">
 .detail-stranka {
-  width: 700px;
+  width: 920px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -96,8 +98,9 @@ export default {
 
 .trasapopis {
   display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px auto;
+  align-items: center;
+  justify-content: center;
 }
 
 h2 {
@@ -105,6 +108,8 @@ h2 {
   background-color: $dark-blue;
   color: white;
   padding: 5px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .mapa {
@@ -122,5 +127,8 @@ h2 {
 
 .graf {
   flex: 1 1 calc((100%-20px) / 2);
+  max-width: 250px;
+  height: auto;
+  font-size: 20px;
 }
 </style>

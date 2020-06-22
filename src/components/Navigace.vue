@@ -4,7 +4,7 @@
       <router-link to="/" class="home nav" >Domů</router-link> 
     </div> 
     <div >
-      <router-link to="/trasy" class="trasy nav" >TRASY</router-link>
+      <router-link to="/trasy" class="trasy nav" >Trasy</router-link>
     </div>
     <div >
       <router-link to="/pujcovny" class= "pujcovny nav" >Půjčovny</router-link>
@@ -23,8 +23,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-
   .navigation{
     background-color: rgba(0,0,0, 0.5);
     font-size: 22px;
@@ -33,19 +31,19 @@ export default {
     position: absolute;
     width: 100%;
     z-index: 2
-    
-    
-    
   }
   .nav{
     display: flex;
     color:$light-text-color;
     text-decoration: none;
-    padding: 15px 35px
+    padding: 15px 35px;
   }
   .nav:hover{
-    background-color: black
+    background-color: black;
   }
- 
+  .router-link-exact-active {
+    background-color: rgba(0, 0, 0, 0.434);
+    font-weight: 550;
+  }
 
 </style>

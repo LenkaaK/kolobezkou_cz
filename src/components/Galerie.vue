@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="galerie">
     <agile @after-change="e => currentSlide = e.currentSlide">
       <div class="slide" v-for="foto in trasa.photo" v-bind:key="foto.picture" >
         <img v-bind:src="require(`./../assets/images/foto-trasy/${foto.picture}.jpeg`)" v-bind:alt="foto.alt" />
@@ -42,6 +42,12 @@ export default {
 </script>
 
 <style lang="scss">
+
+.galerie {
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .agile__nav-button {
   background: transparent;

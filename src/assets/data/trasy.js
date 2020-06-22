@@ -11,7 +11,7 @@ export default [
         terrain: {asphalt: 95, gravel: 5},
         hashtags: ["Beskydy", "Valašsko", "Bečva", "frgál", "kyselica", "Valašské muzeum v přírodě", "Kostel Panny Marie Sněžné"],
         keywords: ["Rožnov pod Radhoštěm", "Velké Karlovice", "Vsetín"],
-        map: `<iframe style="border:none" src="https://frame.mapy.cz/s/gomufakumo" width="700" height="466" frameborder="0"></iframe>`,
+        map: `<iframe style="border:none" src="https://frame.mapy.cz/s/gomufakumo" width="920" height="466" frameborder="0"></iframe>`,
         gpx: "001",
         stars: 5,
         

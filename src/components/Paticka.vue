@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-      <p> &copy; 2020 - All Rights Reserved. Designed by Veronika &amp; Lenka čus bus a "Trhni si"</p>
+      <p> &copy; 2020 - All Rights Reserved. Designed by Veronika &amp; Lenka. Čus bus a "Trhni si".</p>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 
 <style scoped lang="scss">
   .footer{
-    margin-top: 10px;
+    margin-top: 60px;
     padding: 1px;
     font-size: 12px;
     width: 100%;

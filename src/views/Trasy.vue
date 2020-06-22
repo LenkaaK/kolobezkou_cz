@@ -176,7 +176,7 @@ export default {
 
 .road-container {
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
