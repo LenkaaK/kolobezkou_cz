@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="all_roads">
+    <router-link :to="{name: 'Detail', params: {id: trasa.id}}" class="router-link">
       <div class="road_contain">
         <div class="road_image">
           <img v-bind:src="require(`./../assets/images/foto-trasy/${trasa.photo[0].picture}.jpeg`)" />
@@ -24,11 +25,10 @@
         </div>
 
         <div class="chci-vic">
-          <router-link :to="{name: 'Detail', params: {id: trasa.id}}" class="router-link">
             <button class="to_detail">Chci vědět víc</button>
-          </router-link>
         </div>
       </div>
+    </router-link>
     </div>
   </div>
 </template>
@@ -80,6 +80,9 @@ export default {
   height: 720px;
   position: relative;
 }
+.road_contain:active{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
 
 .road_image img {
   display: block;
@@ -120,4 +123,10 @@ export default {
 h3 {
   text-align: center;
 }
+.router-link{
+  text-decoration:none;
+  color: $text-color;
+  }
+  
+
 </style>
