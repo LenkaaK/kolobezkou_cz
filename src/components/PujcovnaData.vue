@@ -2,7 +2,7 @@
   <div>
     <l-marker :lat-lng="gps" @click="onClick()">
       <l-icon
-          :icon-size="[35, 35]"
+          :icon-size="[30, 42]"
           :icon-anchor="[44, 44]"
           :icon-url="require('./../assets/icons/map-looga/map-logo-greyzpisma.png')"
           />
