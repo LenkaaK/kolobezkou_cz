@@ -8,7 +8,11 @@
         <h3 class="road_name">{{trasa.name}}</h3>
 
         <div class="optical-row">
-          <img v-bind:src="require(`./../assets/icons/blankCRid/${trasa.blank}.png`)" width="100px" class="optical-ikona" />
+          <img
+            v-bind:src="require(`./../assets/icons/blankCRid/${trasa.blank}.png`)"
+            width="100px"
+            class="optical-ikona"
+          />
 
           <div class="graf">
             <graf v-bind:trasa="trasa" v-bind:pozadi="'white'" />
@@ -59,7 +63,7 @@ export default {
   bottom: 17px;
 }
 
-.chci-vic{
+.chci-vic {
   text-align: center;
 }
 

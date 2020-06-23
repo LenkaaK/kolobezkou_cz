@@ -2,55 +2,48 @@
   <div class="picture">
     <div class="container">
       <h1>koloběžkou.cz</h1>
-         <p>Ty nejlepší trasy v ČR. <br> Vaše cesta za poznáním může začít právě teď.</p>
+      <p>
+        Ty nejlepší trasy v ČR.
+        <br />Vaše cesta za poznáním může začít právě teď.
+      </p>
     </div>
-
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss" >
-
-
 .picture {
-  background: url('./../assets/images/intro.jpeg') no-repeat center center fixed;
+  background: url("./../assets/images/intro.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz--background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
 }
 
-h1, p {
+h1,
+p {
   text-align: center;
-  
 }
 
-.container h1{
+.container h1 {
   font-size: 80px;
   font-weight: 400;
   margin-bottom: 12px;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
-.container p{
+.container p {
   font-size: 24px;
-  margin: 0
+  margin: 0;
 }
 
-.container{
- position: absolute;
- color: $light-text-color;
- top: 20%;
- width: 100%;
- min-height: 260px;
-    
-
+.container {
+  position: absolute;
+  color: $light-text-color;
+  top: 20%;
+  width: 100%;
+  min-height: 260px;
 }
-
-
 </style>

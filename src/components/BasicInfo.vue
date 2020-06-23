@@ -28,29 +28,27 @@
 
 <script>
 export default {
-    props: ["trasa"]
+  props: ["trasa"]
 };
 </script>
 
 <style scoped lang="scss">
-
 .info-row {
   display: flex;
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.info-ikona, .info-text {
+.info-ikona,
+.info-text {
   flex: 0 1 auto;
   margin: 5px;
 }
 .info-row-hashtag .info-text {
-    display: flex;
-    flex-wrap: wrap;
-    span {
-        margin-right: 5px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  span {
+    margin-right: 5px;
+  }
 }
-
-
 </style>

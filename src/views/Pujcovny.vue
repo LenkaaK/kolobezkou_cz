@@ -22,10 +22,7 @@ import PujcovnaData from "./../components/PujcovnaData.vue";
 import PujcovnyInfo from "./../assets/data/pujcovny";
 import HeaderImage from "./../components/HeaderImage.vue";
 import { latLng } from "leaflet";
-import {
-  LMap,
-  LTileLayer,
-   } from "vue2-leaflet";
+import { LMap, LTileLayer } from "vue2-leaflet";
 export default {
   components: {
     LMap,

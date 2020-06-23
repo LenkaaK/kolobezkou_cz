@@ -19,7 +19,7 @@
           <a :href="gpxUrl">GPX</a>
         </div>
         <div>
-          <a :href="trasa.map" target=”_blank”>Mapy.cz</a>
+          <a :href="trasa.map" target="”_blank”">Mapy.cz</a>
         </div>
         <div class="graf">
           <graf v-bind:trasa="trasa" v-bind:pozadi="'#eeeeee'" v-bind:velikost="'16px'" />
@@ -36,7 +36,6 @@
 
 <script>
 import Graf from "./../components/Graf.vue";
-import Mapa from "./../components/Mapa.vue";
 import Galerie from "./../components/Galerie.vue";
 import trasyData from "./../assets/data/trasy.js";
 import BasicInfo from "./../components/BasicInfo.vue";
@@ -95,14 +94,14 @@ export default {
         .then(response => {
           this.geojson = togeojson.gpx(response.data);
           console.log("unicorn🦄");
-          let leafletGeoJson = geoJson(this.geojson)
-          this.map.fitBounds(leafletGeoJson.getBounds())
+          let leafletGeoJson = geoJson(this.geojson);
+          this.map.fitBounds(leafletGeoJson.getBounds());
         })
         .catch(error => console.log("error"));
     },
 
     onReady() {
-      this.map = this.$refs.myMap.mapObject
+      this.map = this.$refs.myMap.mapObject;
     }
   },
 
@@ -122,7 +121,6 @@ export default {
 
   components: {
     galerie: Galerie,
-    mapa: Mapa,
     graf: Graf,
     basicinfo: BasicInfo,
     podrobnosti: Podrobnosti,
