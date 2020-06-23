@@ -3,10 +3,6 @@
     <headerImage />
     <h2>{{trasa.name}}</h2>
     <div class="detail-stranka">
-      <!-- <div v-html="trasa.map" class="mapa">
-        <mapa />
-      </div>-->
-
       <div class="detail_map" id="mapa">
         <l-map ref="myMap" @ready="onReady" :zoom="zoom" :center="center" style="height:500px">
           <l-tile-layer :url="url" />
@@ -88,6 +84,7 @@ export default {
   },
 
   methods: {
+    // TODO API request getTrasa(id) from backend
     getTrasa() {
       const id = this.$route.params.id;
       this.trasa = trasyData.find(trasa => trasa.id === id);
