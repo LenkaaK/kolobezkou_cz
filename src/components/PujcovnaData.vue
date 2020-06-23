@@ -1,10 +1,10 @@
 <template>
   <div>
-    <l-marker :lat-lng="gps">
-      <l-popup>
+    <l-marker :lat-lng="gps" @click="onClick()">
+      <l-tooltip>
         <h3 class="mojeBarva">{{nazev}}</h3>
         <a v-bind:href="url" target="_blank">{{url}}</a>
-      </l-popup>
+      </l-tooltip>
     </l-marker>
   </div>
 </template>
@@ -20,6 +20,11 @@ export default {
     LPopup,
     LTooltip,
     LIcon
+  },
+  methods:{
+    onClick(){
+      window.open(this.url);
+    }
   },
   props: ["nazev", "url", "gps"]
 };

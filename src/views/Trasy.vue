@@ -185,9 +185,10 @@ export default {
 
 main{
   margin-bottom: 100px;
+  min-height: 100vh;
 }
 .paticka {
-  position: fixed;
+  position: relative;
   bottom: 0;
 }
 

@@ -1,7 +1,6 @@
 <template>
   <div>
     <headerImage v-bind:nadpis="'Půjčovny'" />
-    <div class="main_heading"></div>
     <div class="rental_map" id="mapa">
       <l-map :zoom="zoom" :center="center" style="height:rental_map">
         <l-tile-layer :url="url" />
@@ -64,10 +63,11 @@ export default {
   width: 920px;
   margin: 50px auto 250px auto;
   z-index: 1;
+  min-height: 100vh;
 }
 
 .paticka {
-  position: fixed;
+  position: relative;
   bottom: 0;
   z-index: 2;
 }

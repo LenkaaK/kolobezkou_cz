@@ -44,6 +44,7 @@ export default {
   width: 70%;
   margin: 0 auto 250px auto;
   margin-bottom: 100px;
+  min-height: 100vh;
 }
 .paragrafs {
   margin: 40px 0;
@@ -88,7 +89,7 @@ h2 {
 }
 
 .paticka {
-  position: fixed;
+  position: relative;
   bottom: 0;
 }
 </style>

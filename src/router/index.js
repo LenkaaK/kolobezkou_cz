@@ -30,7 +30,7 @@ Vue.use(VueRouter)
     component: Kontakty
   },
   {
-    path: '/detail/:id',
+    path: '/trasy/:id',
     name: 'Detail',
     component: Detail
   },
