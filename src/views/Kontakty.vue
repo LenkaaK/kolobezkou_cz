@@ -49,11 +49,13 @@ export default {
 }
 .designers{
   display: flex;
-  justify-content: space-between;
-  width: 40%;
+  justify-content: space-around;
+  width: 50%;
   margin: 50px auto;
+  
   h3{
     color: $dark-blue;
+    text-align: center
   }
   
   
@@ -61,6 +63,7 @@ export default {
   border-radius: 50%;
   width: 150px;
   height: 150px;
+  margin: 20px;
   }
   h3{
     margin-top:0;
@@ -73,6 +76,7 @@ export default {
   
   
   a{
+  
   text-decoration: none;
   margin: 10px
   }
