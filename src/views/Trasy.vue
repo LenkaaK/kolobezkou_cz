@@ -184,8 +184,8 @@ export default {
 }
 
 main{
-  margin-bottom: 100px;
-  min-height: calc(100vh - 230px);
+  margin-bottom: 0;
+  min-height: calc(100vh - 292px);
 }
 .paticka {
   position: relative;
