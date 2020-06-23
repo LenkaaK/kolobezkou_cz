@@ -1,6 +1,11 @@
 <template>
   <div>
     <l-marker :lat-lng="gps" @click="onClick()">
+      <l-icon
+          :icon-size="[35, 35]"
+          :icon-anchor="[44, 44]"
+          :icon-url="require('./../assets/icons/gps.svg')"
+          />
       <l-tooltip>
         <h3 class="rental_color">{{nazev}}</h3>
         </l-tooltip>

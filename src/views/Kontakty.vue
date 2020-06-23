@@ -23,7 +23,6 @@
           <img src="./../assets/images/lenka.jpg" alt="lenka" />
         </div>
       </div>
-      
     </div>
     <paticka class="paticka" />
   </div>

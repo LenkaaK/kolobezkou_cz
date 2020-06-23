@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import Paticka from './../components/Paticka.vue'
+import Paticka from "./../components/Paticka.vue";
 import headerImage from "./../components/HeaderImage";
 import Vyhledavac from "./../components/Vyhledavac.vue";
 import Road from "./../components/Road.vue";
@@ -142,14 +142,13 @@ export default {
 };
 </script>
 
-
 <style scoped lang="scss">
 .filter {
   display: flex;
   background-color: $dark-blue;
   padding: 1px;
   justify-content: flex-start;
-  }
+}
 
 .region {
   margin-left: 50px;
@@ -183,7 +182,7 @@ export default {
   align-items: stretch;
 }
 
-main{
+main {
   margin-bottom: 100px;
   min-height: calc(100vh - 231px);
 }

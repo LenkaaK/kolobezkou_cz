@@ -3,6 +3,12 @@ import App from './App.vue'
 import router from './router'
 import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet';
+import Donut from 'vue-css-donut-chart';
+import 'vue-css-donut-chart/dist/vcdonut.css';
+import VueAgile from 'vue-agile';
+
+Vue.use(VueAgile);
+Vue.use(Donut);
 
 delete Icon.Default.prototype._getIconUrl;
   Icon.Default.mergeOptions({

@@ -1,8 +1,11 @@
 <template>
   <div class="galerie">
     <agile @after-change="e => currentSlide = e.currentSlide">
-      <div class="slide" v-for="foto in trasa.photo" v-bind:key="foto.picture" >
-        <img v-bind:src="require(`./../assets/images/foto-trasy/${foto.picture}.jpeg`)" v-bind:alt="foto.alt" />
+      <div class="slide" v-for="foto in trasa.photo" v-bind:key="foto.picture">
+        <img
+          v-bind:src="require(`./../assets/images/foto-trasy/${foto.picture}.jpeg`)"
+          v-bind:alt="foto.alt"
+        />
       </div>
 
       <template slot="prevButton">
@@ -11,19 +14,17 @@
       <template slot="nextButton">
         <img src="./../assets/icons/vpravo.svg" width="50px" />
       </template>
-      
     </agile>
 
     <!-- <agile ref="agile2" :as-nav-for="[$refs.agile2]">
       <div v-for="foto in trasa.photo" v-bind:key="`1${foto.picture}`" >
         <p>{{foto.text}}</p>
       </div>
-    </agile> -->
+    </agile>-->
 
     <div>
       <p>{{trasa.photo[currentSlide].text}}</p>
     </div>
-
   </div>
 </template>
 
@@ -33,16 +34,13 @@ export default {
 
   data() {
     return {
-      currentSlide: 0,
-    }
+      currentSlide: 0
+    };
   }
-
-
 };
 </script>
 
 <style lang="scss">
-
 .galerie {
   width: 700px;
   margin-right: auto;
@@ -59,7 +57,7 @@ export default {
   position: absolute;
   top: 0;
   -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
   width: 80px;
 }
 .agile__nav-button:hover {
@@ -77,7 +75,7 @@ export default {
   left: 50%;
   position: absolute;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .agile__dot {
   margin: 0 10px;
@@ -94,10 +92,11 @@ export default {
   margin: 0;
   padding: 0;
   -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
   width: 10px;
 }
-.agile__dot--current button, .agile__dot:hover button {
+.agile__dot--current button,
+.agile__dot:hover button {
   background-color: #fff;
 }
 
@@ -111,8 +110,5 @@ export default {
     max-height: 466.6px;
     object-fit: contain;
   }
-
 }
-
-
 </style>

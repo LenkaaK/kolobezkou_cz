@@ -34,24 +34,31 @@ export default {
   computed: {
     sections() {
       return [
-        { label: `Asfalt ${this.trasa.terrain.asphalt}%`, value: this.trasa.terrain.asphalt, color: "#ec9b3b" },
-        { label: `Terén ${this.trasa.terrain.gravel}%`, value: this.trasa.terrain.gravel, color: "#00818a" }
+        {
+          label: `Asfalt ${this.trasa.terrain.asphalt}%`,
+          value: this.trasa.terrain.asphalt,
+          color: "#ec9b3b"
+        },
+        {
+          label: `Terén ${this.trasa.terrain.gravel}%`,
+          value: this.trasa.terrain.gravel,
+          color: "#00818a"
+        }
       ];
     }
   },
 
   methods: {
     handleSectionMouseover(section, event) {
-      this.contentLabel=section.label;
+      this.contentLabel = section.label;
     },
 
     handleSectionMouseout(section, event) {
-        this.contentLabel="Povrch";
+      this.contentLabel = "Povrch";
     }
   }
 };
 </script>
 
 <style scoped>
-
 </style>
