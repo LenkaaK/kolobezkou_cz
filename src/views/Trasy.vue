@@ -184,7 +184,7 @@ export default {
 }
 
 main{
-  margin-bottom: 0;
+  margin-bottom: 100px;
   min-height: calc(100vh - 231px);
 }
 .paticka {
