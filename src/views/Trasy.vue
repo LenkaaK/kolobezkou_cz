@@ -149,7 +149,7 @@ export default {
   background-color: $dark-blue;
   padding: 1px;
   justify-content: flex-start;
-}
+  }
 
 .region {
   margin-left: 50px;
@@ -185,7 +185,7 @@ export default {
 
 main{
   margin-bottom: 100px;
-  min-height: 100vh;
+  min-height: calc(100vh - 230px);
 }
 .paticka {
   position: relative;

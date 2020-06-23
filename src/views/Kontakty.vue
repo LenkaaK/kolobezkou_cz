@@ -42,9 +42,8 @@ export default {
 <style scoped lang="scss">
 .contact {
   width: 70%;
-  margin: 0 auto 250px auto;
-  margin-bottom: 100px;
-  min-height: 100vh;
+  margin: 0 auto 50px auto;
+  min-height: calc(100vh-230px);
 }
 .paragrafs {
   margin: 40px 0;

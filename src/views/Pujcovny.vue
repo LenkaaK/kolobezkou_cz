@@ -25,19 +25,11 @@ import { latLng } from "leaflet";
 import {
   LMap,
   LTileLayer,
-  LMarker,
-  LPopup,
-  LTooltip,
-  LIcon
-} from "vue2-leaflet";
+   } from "vue2-leaflet";
 export default {
   components: {
     LMap,
     LTileLayer,
-    LMarker,
-    LPopup,
-    LTooltip,
-    LIcon,
     HeaderImage,
     PujcovnaData,
     Paticka
@@ -61,9 +53,9 @@ export default {
 .rental_map {
   height: 500px;
   width: 920px;
-  margin: 50px auto 250px auto;
+  margin: 50px auto 50px auto;
   z-index: 1;
-  min-height: 100vh;
+  min-height: calc(100vh - 230px);
 }
 
 .paticka {

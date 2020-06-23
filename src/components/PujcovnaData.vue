@@ -2,20 +2,17 @@
   <div>
     <l-marker :lat-lng="gps" @click="onClick()">
       <l-tooltip>
-        <h3 class="mojeBarva">{{nazev}}</h3>
-        <a v-bind:href="url" target="_blank">{{url}}</a>
-      </l-tooltip>
+        <h3 class="rental_color">{{nazev}}</h3>
+        </l-tooltip>
     </l-marker>
   </div>
 </template>
 
 <script>
-import { latLng } from "leaflet";
-import { LTileLayer, LMarker, LPopup, LTooltip, LIcon } from "vue2-leaflet";
+import { LMarker, LPopup, LTooltip, LIcon } from "vue2-leaflet";
 
 export default {
   components: {
-    LTileLayer,
     LMarker,
     LPopup,
     LTooltip,
@@ -30,5 +27,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+  .rental_color{
+      color:$light-blue;
+  }
 </style>

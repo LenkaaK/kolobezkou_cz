@@ -170,7 +170,7 @@ h2 {
   color: white;
   padding: 5px;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 .mapa {
