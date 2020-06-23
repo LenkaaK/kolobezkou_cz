@@ -62,6 +62,6 @@ export default {
 .rental_map {
   height: 500px;
   width: 920px;
-  margin: 50px auto 50px auto;
+  margin: 50px auto 250px auto;
 }
 </style>

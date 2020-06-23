@@ -41,7 +41,7 @@ export default {
 <style scoped lang="scss">
 .contact{
   width:70%;
-  margin: 0 auto 120px auto;
+  margin: 0 auto 250px auto;
 
 }
 .paragrafs{
