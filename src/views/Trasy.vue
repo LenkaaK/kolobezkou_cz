@@ -66,13 +66,11 @@
 <script>
 import Paticka from "./../components/Paticka.vue";
 import headerImage from "./../components/HeaderImage";
-import Vyhledavac from "./../components/Vyhledavac.vue";
 import Road from "./../components/Road.vue";
 import trasyData from "./../assets/data/trasy.js";
 
 export default {
   components: {
-    vyhledavac: Vyhledavac,
     road: Road,
     headerImage,
     Paticka
