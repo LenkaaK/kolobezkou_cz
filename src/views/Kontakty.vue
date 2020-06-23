@@ -11,9 +11,9 @@
         </div>
       </div>
       <hr />
+
       <h2>Designerky a tvůrkyně stránek</h2>
       <div class="designers">
-        
         <div class="veronika info">
           <h3>Veronika Jiříčková</h3>
           <img src="./../assets/images/veronika.jpeg" alt="veronika" />
@@ -23,6 +23,7 @@
           <img src="./../assets/images/lenka.jpg" alt="lenka" />
         </div>
       </div>
+      
     </div>
     <paticka class="paticka" />
   </div>
@@ -72,6 +73,7 @@ export default {
 }
 h2 {
   text-align: center;
+  margin-top: 40px;
 }
 .mail_icon {
   display: flex;
