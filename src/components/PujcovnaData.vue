@@ -4,7 +4,7 @@
       <l-icon
           :icon-size="[35, 35]"
           :icon-anchor="[44, 44]"
-          :icon-url="require('./../assets/icons/gps.svg')"
+          :icon-url="require('./../assets/icons/map-looga/map-logo-greyzpisma.png')"
           />
       <l-tooltip>
         <h3 class="rental_color">{{nazev}}</h3>
