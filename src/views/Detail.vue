@@ -4,7 +4,6 @@
     <h2>{{trasa.name}}</h2>
     <div class="detail-stranka">
       
-
       <div v-html="trasa.map" class="mapa">
         <mapa />
       </div>
@@ -22,7 +21,7 @@
 
       <galerie v-bind:trasa="trasa" />
     </div>
-    <paticka />
+    <paticka class="paticka" />
   </div>
 </template>
 
@@ -88,6 +87,7 @@ export default {
   width: 920px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
 }
 
 .trasapopis p {
@@ -130,5 +130,11 @@ h2 {
   max-width: 250px;
   height: auto;
   font-size: 20px;
+}
+
+
+.paticka {
+  position: fixed;
+  bottom: 0;
 }
 </style>

@@ -59,7 +59,7 @@
         />
       </div>
     </main>
-    <paticka />
+    <paticka class="paticka" />
   </div>
 </template>
 
@@ -181,6 +181,14 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
+}
+
+main{
+  margin-bottom: 100px;
+}
+.paticka {
+  position: fixed;
+  bottom: 0;
 }
 
 </style>

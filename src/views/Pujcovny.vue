@@ -5,21 +5,22 @@
     <div class="rental_map" id="mapa">
       <l-map :zoom="zoom" :center="center" style="height:rental_map">
         <l-tile-layer :url="url" />
-        <pujcovna-data v-for="(pujcovna, index) in data"
-        v-bind:key="index" 
-        v-bind:nazev ="pujcovna.name"
-        v-bind:url="pujcovna.url"
-        v-bind:gps="pujcovna.gps"
-         />
+        <pujcovna-data
+          v-for="(pujcovna, index) in data"
+          v-bind:key="index"
+          v-bind:nazev="pujcovna.name"
+          v-bind:url="pujcovna.url"
+          v-bind:gps="pujcovna.gps"
+        />
       </l-map>
     </div>
-    <paticka />
+    <paticka class="paticka" />
   </div>
 </template>
 <script>
-import Paticka from './../components/Paticka.vue'
-import PujcovnaData from './../components/PujcovnaData.vue'
-import PujcovnyInfo from './../assets/data/pujcovny'
+import Paticka from "./../components/Paticka.vue";
+import PujcovnaData from "./../components/PujcovnaData.vue";
+import PujcovnyInfo from "./../assets/data/pujcovny";
 import HeaderImage from "./../components/HeaderImage.vue";
 import { latLng } from "leaflet";
 import {
@@ -41,7 +42,6 @@ export default {
     HeaderImage,
     PujcovnaData,
     Paticka
-    
   },
 
   data() {
@@ -63,5 +63,12 @@ export default {
   height: 500px;
   width: 920px;
   margin: 50px auto 250px auto;
+  z-index: 1;
+}
+
+.paticka {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
 }
 </style>

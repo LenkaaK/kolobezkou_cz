@@ -3,27 +3,28 @@
     <headerImage v-bind:nadpis="'Kontakty'" />
     <div class="contact">
       <div class="paragrafs">
-      <p>Projeli jste naši trasu? Podělte se s námi o zážitky, fotky a doplňující informace.</p>
-      <p>Projeli jste nějakou zajímavou trasu, kterou na našich stránkách ještě nemáme? Dejte nám o ní vědět.</p>
-      <div class="mail_icon">
-        <img src="./../assets/icons/mail.svg" width="30px" class="mail-ikona" /> 
-        <a href="mailto:footbikescz@gmail.cz"> footbikescz@gmail.cz</a >
+        <p>Projeli jste naši trasu? Podělte se s námi o zážitky, fotky a doplňující informace.</p>
+        <p>Projeli jste nějakou zajímavou trasu, kterou na našich stránkách ještě nemáme? Dejte nám o ní vědět.</p>
+        <div class="mail_icon">
+          <img src="./../assets/icons/mail.svg" width="30px" class="mail-ikona" />
+          <a href="mailto:footbikescz@gmail.com">footbikescz@gmail.com</a>
+        </div>
       </div>
-      </div>
-    <hr>
-    <div class="designers">
-      <div class="veronika info">
-      <h3>Veronika Jiříčková</h3>
-      <img src="./../assets/images/veronika.jpg" alt="veronika" >
-      </div>
-      <div class="lenka info">
-      <h3>Lenka Kopuletá</h3>
-      <img src="./../assets/images/lenka.jpg" alt="lenka" >
-      </div>
+      <hr />
+      <h2>Designerky a tvůrkyně stránek</h2>
+      <div class="designers">
+        
+        <div class="veronika info">
+          <h3>Veronika Jiříčková</h3>
+          <img src="./../assets/images/veronika.jpeg" alt="veronika" />
+        </div>
+        <div class="lenka info">
+          <h3>Lenka Kopuletá</h3>
+          <img src="./../assets/images/lenka.jpg" alt="lenka" />
+        </div>
       </div>
     </div>
-  <paticka />
-    
+    <paticka class="paticka" />
   </div>
 </template>
 
@@ -39,49 +40,55 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.contact{
-  width:70%;
+.contact {
+  width: 70%;
   margin: 0 auto 250px auto;
-
+  margin-bottom: 100px;
 }
-.paragrafs{
+.paragrafs {
   margin: 40px 0;
 }
-.designers{
+.designers {
   display: flex;
   justify-content: space-around;
   width: 50%;
   margin: 50px auto;
-  
-  h3{
+
+  h3 {
     color: $dark-blue;
-    text-align: center
+    text-align: center;
   }
-  
-  
-  img{
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  margin: 20px;
+
+  img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
   }
-  h3{
-    margin-top:0;
-    margin-bottom: 10px
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 }
-.mail_icon{
+h2 {
+  text-align: center;
+}
+.mail_icon {
   display: flex;
   justify-content: center;
-  
-  
-  a{
-  
-  text-decoration: none;
-  margin: 10px
+
+  a {
+    text-decoration: none;
+    margin: 10px;
+    color: $dark-yellow;
   }
-  a:hover{
+  a:hover {
     color: $light-blue;
   }
+}
+
+.paticka {
+  position: fixed;
+  bottom: 0;
 }
 </style>

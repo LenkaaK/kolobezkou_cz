@@ -4,13 +4,13 @@
       <router-link to="/" class="home nav" >Domů</router-link> 
     </div> 
     <div >
-      <router-link to="/trasy" class="trasy nav" >Trasy</router-link>
+      <router-link to="/trasy" class="trasy nav vid" >Trasy</router-link>
     </div>
     <div >
-      <router-link to="/pujcovny" class= "pujcovny nav" >Půjčovny</router-link>
+      <router-link to="/pujcovny" class= "pujcovny nav vid" >Půjčovny</router-link>
     </div>
     <div>
-      <router-link to="/kontakty" class="kontakty nav">Kontakty</router-link>
+      <router-link to="/kontakty" class="kontakty nav vid">Kontakty</router-link>
     </div>
     
   </div>
@@ -41,9 +41,11 @@ export default {
   .nav:hover{
     background-color: black;
   }
-  .router-link-exact-active {
+  .router-link-active.vid {
     background-color: rgba(0, 0, 0, 0.434);
     font-weight: 550;
   }
+
+
 
 </style>
