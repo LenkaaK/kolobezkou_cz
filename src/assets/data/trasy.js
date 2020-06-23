@@ -12,7 +12,7 @@ export default [
         terrain: {asphalt: 95, gravel: 5},
         hashtags: ["Beskydy", "Valašsko", "Bečva", "frgál", "kyselica", "Valašské muzeum v přírodě", "Kostel Panny Marie Sněžné"],
         keywords: ["Rožnov pod Radhoštěm", "Velké Karlovice", "Vsetín"],
-        map: `<iframe style="border:none" src="https://frame.mapy.cz/s/gomufakumo" width="920" height="466" frameborder="0"></iframe>`,
+        map: `https://mapy.cz/s/cedutoneba`,
         gpx: "001",
         stars: 5,
         
@@ -48,7 +48,7 @@ export default [
         terrain: {asphalt: 90, gravel: 10},
         hashtags: ["Jeseníky", "borůvkové knedlíky", "Hanušovice", "Holba"],
         keywords: ["Jeseník", "Ramzová", "Ostružná", "Branná", "Ruda nad Moravou"],
-        map: `<iframe style="border:none" src="https://frame.mapy.cz/s/luretuceve" width="700" height="466" frameborder="0"></iframe>`,
+        map: `https://mapy.cz/s/pusumehube`,
         gpx: "002",
         stars: 4,
         
@@ -120,7 +120,7 @@ export default [
         terrain: {asphalt: 90, gravel: 10},
         hashtags: ["Jeseníky", "borůvkové knedlíky", "Hanušovice", "Holba"],
         keywords: ["Jeseník", "Ramzová", "Ostružná", "Branná", "Ruda nad Moravou"],
-        map: `<iframe style="border:none" src="https://frame.mapy.cz/s/luretuceve" width="700" height="466" frameborder="0"></iframe>`,
+        map: `https://mapy.cz/s/cedutoneba`,
         gpx: "002",
         stars: 4,
         
@@ -156,7 +156,7 @@ export default [
         terrain: {asphalt: 90, gravel: 10},
         hashtags: ["Jeseníky", "borůvkové knedlíky", "Hanušovice", "Holba"],
         keywords: ["Jeseník", "Ramzová", "Ostružná", "Branná", "Ruda nad Moravou"],
-        map: `<iframe style="border:none" src="https://frame.mapy.cz/s/luretuceve" width="700" height="466" frameborder="0"></iframe>`,
+        map: `https://mapy.cz/s/cedutoneba`,
         gpx: "002",
         stars: 4,
         

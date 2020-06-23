@@ -22,6 +22,9 @@
         <div>
           <a :href="gpxUrl">GPX</a>
         </div>
+        <div>
+          <a :href="trasa.map" target=”_blank”>Mapy.cz</a>
+        </div>
         <div class="graf">
           <graf v-bind:trasa="trasa" v-bind:pozadi="'#eeeeee'" v-bind:velikost="'16px'" />
         </div>

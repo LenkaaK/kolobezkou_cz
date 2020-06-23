@@ -3,7 +3,7 @@
       <div class="filter">
           <div class="region">
                <select v-model= "region">
-                    <option value="start">Vyber region </option>
+                    <option value="start">Region</option>
                     <option value="Praha">Praha </option>
                     <option value="Střední Čechy">Střední Čechy</option>
                     <option value="Jižní Čechy">Jižní Čechy</option>
