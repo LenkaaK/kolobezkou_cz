@@ -49,7 +49,7 @@ export default {
 }
 .rental_map {
   height: 500px;
-  width: 920px;
+  max-width: 920px;
   margin: 50px auto 50px auto;
   z-index: 1;
   min-height: calc(100vh - 230px);

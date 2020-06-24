@@ -145,22 +145,19 @@ export default {
   display: flex;
   background-color: $dark-blue;
   padding: 1px;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.region {
-  margin-left: 50px;
-}
 .select {
   font-size: 16px;
   color: $text-color;
   background-color: #eeeeee;
   padding: 10px;
-  margin: 10px 30px 10px 10px;
+  margin: 10px;
   border-radius: 5px;
   border: none;
 }
-
 .key_words input {
   font-size: 16px;
   color: $text-color;
@@ -172,12 +169,33 @@ export default {
 }
 
 .road-container {
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 790px) {
+  .filter {
+  justify-content: flex-start;
+}
+}
+@media (min-width: 900px) {
+  .road-container {
   width: 90%;
   margin: 20px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
+}
+}
+@media (min-width: 950px) {
+  .select {
+    margin: 10px 30px 10px 10px;
+  }
+  .region {
+    margin-left: 50px;
+  }
 }
 
 main {

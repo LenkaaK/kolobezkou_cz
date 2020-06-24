@@ -49,16 +49,10 @@ export default {
   margin: 40px 0;
 }
 .designers {
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
-  margin: 50px auto;
-
   h3 {
     color: $dark-blue;
-    text-align: center;
+    
   }
-
   img {
     border-radius: 50%;
     width: 150px;
@@ -70,6 +64,19 @@ export default {
     margin-bottom: 10px;
   }
 }
+.info {
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .designers {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 50px auto;
+  }
+}
+
 h2 {
   text-align: center;
   margin-top: 40px;

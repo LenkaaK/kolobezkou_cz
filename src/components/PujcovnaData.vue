@@ -3,7 +3,7 @@
     <l-marker :lat-lng="gps" @click="onClick()">
       <l-icon
           :icon-size="[30, 42]"
-          :icon-anchor="[44, 44]"
+          :icon-anchor="[15, 42]"
           :icon-url="require('./../assets/icons/map-looga/map-logo-greyzpisma.png')"
           />
       <l-tooltip>
@@ -35,5 +35,6 @@ export default {
 <style scoped lang="scss">
   .rental_color{
       color:$light-blue;
+      border-radius: 15px;
   }
 </style>
