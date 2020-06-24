@@ -23,36 +23,6 @@ export default {};
   background-size: cover;
 }
 
-@media (min-width: 450px) {
-  .picture {
-  background: url("./../assets/images/intro.jpeg") no-repeat -400px center fixed;
-  -webkit-background-size: cover;
-  -moz--background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  }
-}
-
-@media (min-width: 550px) {
-  .picture {
-  background: url("./../assets/images/intro.jpeg") no-repeat -300px center fixed;
-  -webkit-background-size: cover;
-  -moz--background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  }
-}
-
-@media (min-width: 700px) {
-  .picture {
-  background: url("./../assets/images/intro.jpeg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz--background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  }
-}
-
 .container{
   position: absolute;
   color: $light-text-color;
@@ -72,6 +42,26 @@ export default {};
   margin: 0;
   }
 } 
+
+@media (min-width: 450px) {
+  .picture {
+  background: url("./../assets/images/intro.jpeg") no-repeat -400px center fixed;
+  -webkit-background-size: cover;
+  -moz--background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
+
+@media (min-width: 550px) {
+  .picture {
+  background: url("./../assets/images/intro.jpeg") no-repeat -300px center fixed;
+  -webkit-background-size: cover;
+  -moz--background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
 @media (min-width: 640px) {
   .container {
     h1 {
@@ -89,6 +79,15 @@ export default {};
     background-size: cover;
   }
 }
+@media (min-width: 700px) {
+  .picture {
+  background: url("./../assets/images/intro.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz--background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
 @media (min-width: 960px) {
   .container {
     h1 {
@@ -99,6 +98,40 @@ export default {};
     }
   }
 }
-
-
+@media (min-width: 1125px) {
+  .picture {
+  background: url("./../assets/images/intro.jpeg") no-repeat center -50px fixed;
+  -webkit-background-size: cover;
+  -moz--background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
+@media (min-width: 1200px) {
+  .picture {
+  background: url("./../assets/images/intro.jpeg") no-repeat center -80px fixed;
+  -webkit-background-size: cover;
+  -moz--background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
+@media (min-width: 1250px) {
+  .picture {
+  background: url("./../assets/images/intro.jpeg") no-repeat center -120px fixed;
+  -webkit-background-size: cover;
+  -moz--background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
+@media (min-width: 1300px) {
+  .picture {
+  background: url("./../assets/images/intro.jpeg") no-repeat center -175px fixed;
+  -webkit-background-size: cover;
+  -moz--background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+}
 </style>

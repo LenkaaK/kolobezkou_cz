@@ -1,34 +1,36 @@
 <template>
   <div>
     <div class="all_roads">
-    <router-link :to="{name: 'Detail', params: {id: trasa.id}}" class="router-link">
-      <div class="road_contain">
-        <div class="road_image">
-          <img v-bind:src="require(`./../assets/images/foto-trasy/${trasa.photo[0].picture}.jpeg`)" />
-        </div>
-        <h3 class="road_name">{{trasa.name}}</h3>
+      <router-link :to="{name: 'Detail', params: {id: trasa.id}}" class="router-link">
+        <div class="road_contain">
+          <div class="road_image">
+            <img
+              v-bind:src="require(`./../assets/images/foto-trasy/${trasa.photo[0].picture}.jpeg`)"
+            />
+          </div>
+          <h3 class="road_name">{{trasa.name}}</h3>
 
-        <div class="optical-row">
-          <img
-            v-bind:src="require(`./../assets/icons/blankCRid/${trasa.blank}.png`)"
-            width="100px"
-            class="optical-ikona"
-          />
+          <div class="optical-row">
+            <img
+              v-bind:src="require(`./../assets/icons/blankCRid/${trasa.blank}.png`)"
+              width="100px"
+              class="optical-ikona"
+            />
 
-          <div class="graf">
-            <graf v-bind:trasa="trasa" v-bind:pozadi="'white'" />
+            <div class="graf">
+              <graf v-bind:trasa="trasa" v-bind:pozadi="'white'" />
+            </div>
+          </div>
+
+          <div class="road_info">
+            <basicinfo v-bind:trasa="trasa" />
+          </div>
+
+          <div class="chci-vic">
+            <button class="to_detail">Chci vědět víc</button>
           </div>
         </div>
-
-        <div class="road_info">
-          <basicinfo v-bind:trasa="trasa" />
-        </div>
-
-        <div class="chci-vic">
-            <button class="to_detail">Chci vědět víc</button>
-        </div>
-      </div>
-    </router-link>
+      </router-link>
     </div>
   </div>
 </template>
@@ -80,7 +82,7 @@ export default {
   height: 720px;
   position: relative;
 }
-.road_contain:active{
+.road_contain:active {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -123,10 +125,8 @@ export default {
 h3 {
   text-align: center;
 }
-.router-link{
-  text-decoration:none;
+.router-link {
+  text-decoration: none;
   color: $text-color;
-  }
-  
-
+}
 </style>

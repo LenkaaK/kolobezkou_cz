@@ -4,7 +4,7 @@
     <h2>{{trasa.name}}</h2>
     <div class="detail-stranka">
       <div class="detail_map" id="mapa">
-        <l-map ref="myMap" @ready="onReady" :zoom="zoom" :center="center" style="height:500px">
+        <l-map ref="myMap" @ready="onReady" :zoom="zoom" :center="center" style="height:detail_map">
           <l-tile-layer :url="url" />
           <l-geo-json :geojson="geojson" :options="fgLineOptions"></l-geo-json>
           <l-geo-json :geojson="geojson" :options="mapOptions"></l-geo-json>
@@ -15,12 +15,15 @@
         <div class="info">
           <basicinfo v-bind:trasa="trasa" />
         </div>
-        <div>
-          <a :href="gpxUrl">GPX</a>
+        <div class="odkazy">
+          <div class="odkaz">
+            <a :href="gpxUrl">GPX</a>
+          </div>
+          <div class="odkaz">
+            <a :href="trasa.map" target="_blank">Mapy.cz</a>
+          </div>
         </div>
-        <div>
-          <a :href="trasa.map" target="”_blank”">Mapy.cz</a>
-        </div>
+
         <div class="graf">
           <graf v-bind:trasa="trasa" v-bind:pozadi="'#eeeeee'" v-bind:velikost="'16px'" />
         </div>
@@ -142,13 +145,17 @@ export default {
 
 <style scoped lang="scss">
 .detail-stranka {
-  width: 920px;
+  max-width: 920px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
   min-height: 100vh;
 }
-
+.detail_map {
+  height: 500px;
+  max-width: 920px;
+  margin: 50px auto 50px auto;
+}
 .trasapopis p {
   color: black;
   text-transform: none;
@@ -156,10 +163,7 @@ export default {
 }
 
 .trasapopis {
-  display: flex;
-  margin: 10px auto;
-  align-items: center;
-  justify-content: center;
+  margin: 10px 20px;
 }
 
 h2 {
@@ -169,10 +173,6 @@ h2 {
   padding: 5px;
   margin-top: 0;
   margin-bottom: 45px;
-}
-
-.mapa {
-  text-align: center;
 }
 
 .inline {
@@ -189,6 +189,43 @@ h2 {
   max-width: 250px;
   height: auto;
   font-size: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.odkazy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  flex-grow: 1;
+  min-width: 150px;
+
+  a {
+    text-decoration: none;
+    margin: 10px;
+    color: $dark-yellow;
+  }
+  a:hover {
+    color: $light-blue;
+  }
+}
+
+.odkaz {
+  margin: 20px;
+}
+
+@media (min-width: 730px) {
+  .trasapopis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .odkazy {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .paticka {

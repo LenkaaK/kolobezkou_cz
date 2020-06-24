@@ -44,6 +44,7 @@ export default {
   width: 70%;
   margin: 0 auto 50px auto;
   min-height: calc(100vh-230px);
+  text-align: center;
 }
 .paragrafs {
   margin: 40px 0;
@@ -64,9 +65,7 @@ export default {
     margin-bottom: 10px;
   }
 }
-.info {
-  text-align: center;
-}
+
 
 @media (min-width: 500px) {
   .designers {

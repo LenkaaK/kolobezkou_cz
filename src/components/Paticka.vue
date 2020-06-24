@@ -17,6 +17,7 @@ export default {};
   background-color: $dark-blue;
   color: $light-text-color;
   clear: both;
+  text-align: center;
 }
 </style>>
 

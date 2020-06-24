@@ -16,12 +16,6 @@
       </template>
     </agile>
 
-    <!-- <agile ref="agile2" :as-nav-for="[$refs.agile2]">
-      <div v-for="foto in trasa.photo" v-bind:key="`1${foto.picture}`" >
-        <p>{{foto.text}}</p>
-      </div>
-    </agile>-->
-
     <div>
       <p>{{trasa.photo[currentSlide].text}}</p>
     </div>
@@ -110,5 +104,8 @@ export default {
     max-height: 466.6px;
     object-fit: contain;
   }
+}
+p {
+  text-align: center;
 }
 </style>

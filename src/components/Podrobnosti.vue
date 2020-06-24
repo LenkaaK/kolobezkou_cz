@@ -53,21 +53,26 @@ export default {
 
 <style scoped lang="scss">
 .info-podrobnosti {
-  display: flex;
-  flex-wrap: wrap;
   border: 1px solid $dark-blue;
   padding: 20px;
-  margin: 35px 0;
+  margin: 35px 20px;
 }
 .info-row2 {
   display: flex;
   flex-basis: 50%;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 650px) {
+  .info-podrobnosti {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .info-icon-text {
   display: flex;
 }
-
 .info-icon2,
 .info-text2 {
   margin: 7px 20px 15px 7px;
